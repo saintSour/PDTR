@@ -1,0 +1,273 @@
+#pragma once
+#include <iostream>
+#include <cstring>
+#include <iomanip>
+#include <vector>
+#include <iterator>
+
+#include "Inventory.h"
+class Actors
+{
+public:
+	Actors()
+	{
+		this->initiative = 0;
+	}
+	int initiative;
+};
+class maincharacter : public Actors
+{
+public:
+	maincharacter()
+	{
+		setLevelsOfExperience(levelsOfExperience);
+	}
+
+	std::string roleType;
+	int characterLevel = 0;
+
+	int maxHitPoints = 21;
+	int maxManaPoints = 4;
+	int hitPoints = maxHitPoints;
+	int manaPoints = maxManaPoints;
+
+	int hpMultiplier;
+	int mpMultiplier;
+	int addHpMultiplier;
+	int addMpMultiplier;
+
+	int physicalDamage;
+	int magicalDamage;
+	double criticalChance;
+	double criticalRate;
+
+	double blockChance; //шанс непосредственного блокирования
+	double dodgeChance;
+	double accuracy;
+
+	int actionPoints; //Количество ОД
+	int maxActionPoints = 3;
+	int roleActionPoints;
+	int maxRoleActionPoints;
+
+	int physicalStability;
+	int magicalStability;
+
+	int physicalStrength; //нерабочий вариант
+	int magicalStrength;
+
+	int agility; //ловкость
+	int rhetoric; //красноречие, а-ля убеждение
+	int luck; //удача
+	int spirit; //дух
+	int endurance; //выносливость
+	//int initiative; //инициатива
+	int visibility; //заметность
+
+	double maxWeight; //Максимальный вес
+	double dropChance; //Доп. Шанс выпадения лута
+
+private:
+	int countOfExperience = 0;
+	double levelsOfExperience[100]{};
+	void setLevelsOfExperience(double levelsOfExperience[]) // ! настройка количества опыта, необоходимого для каждого уровня !
+	{
+		levelsOfExperience[0] = 100;
+		int helpCount = 56;
+		for (int i = 1; i < 100; i++)
+		{
+			levelsOfExperience[i] = levelsOfExperience[i - 1] + helpCount;
+			helpCount = (helpCount + (i / 2) * 27);
+		}
+		/*for (int i = 0; i < 100; i++) //debug
+		{
+			std::cout << "Уровень " << (i + 1) << "Кол-во опыта " << std::fixed << std::setprecision(0) << levelsOfExperience[i] << std::endl;
+		}*/
+	}
+	void setLevelOfCharacter()
+	{
+		if (countOfExperience >= levelsOfExperience[characterLevel]) //проверка, имеется ли необходимое количество опыта у персонажа
+		{
+			characterLevel += 1;
+			std::cout << "Поздравляем с получением " << characterLevel << " уровня!" << std::endl;
+		}
+	}
+
+	int initialHitPoints = 21; //Начальные значения
+	int initialManaPoints = 4;
+	int initialPhysDamage = 4;
+	int initialMagDamage = 0;
+	int initialActionPoints = 3;
+
+public:
+
+	void setCountOfExperience(int incCountOfExperience) //получение персонажем опыта
+	{
+		countOfExperience += incCountOfExperience;
+		std::cout << "Вы получили " << incCountOfExperience << " опыта\n";
+		setLevelOfCharacter();
+	}
+
+	void characterUpdate(maincharacter& mainCharacter)
+	{
+		setLevelOfCharacter();
+		//CQACount(mainCharacter); не вариант, так как ошибка линковки (два файла вызывают друг друга)
+		//InfluenceOfEffects() InfluenceOfEffectsTurnBegin() / InfluenceOfEffectsTurnEnd()
+	}
+
+	int GetInitialHitPoints()
+	{
+		return initialHitPoints;
+	}
+	int GetInitialManaPoints()
+	{
+		return initialManaPoints;
+	}
+	int GetInitialPhysDamage()
+	{
+		return initialPhysDamage;
+	}
+	void SetInitialPhysDamage(int initialPhysDamage)
+	{
+		this->initialPhysDamage = initialPhysDamage;
+	}
+	int GetInitialMagDamage()
+	{
+		return initialMagDamage;
+	}
+	void SetInitialMagDamage(int initialMagDamage)
+	{
+		this->initialMagDamage = initialMagDamage;
+	}
+	void SetInitialActionPoints(int initialActionPoints) //можно убрать, так как имеется постоянное значение
+	{
+		this->initialActionPoints = initialActionPoints;
+	}
+
+	public: Inventory inventory; //инвентарь персонажа
+};
+/*class Inventory : private maincharacter
+{
+public:
+	std::vector<unsigned short> inventory;
+};*/
+
+class _
+{
+public:
+	int hpMultiplier = 28; //оставил ВОВОЧКЕ БЛЯТЬ ЕСЛИ ЧТО
+	int mpMultiplier = 12;
+	int addHpMultiplier = 6;
+	int addMpMultiplier = 3;
+
+	int physicalStrength = 0;
+	int physicalStability = 0;
+	int magicalStrength = 0;
+	int magicalStability = 0;
+	int agility = 0;
+	int rhetoric = 0;
+	int luck = 0;
+	int spirit = 0;
+	int endurance = 0;
+private:
+};
+
+class Warrior //характеристики игровых классов
+{
+public:
+	int hpMultiplier = 28;
+	int mpMultiplier = 12;
+	int addHpMultiplier = 6;
+	int addMpMultiplier = 3;
+
+	int physicalStrength = 6;
+	int physicalStability = 14;
+	int magicalStrength = 1;
+	int magicalStability = 3;
+	int agility = 2;
+	int rhetoric = 1;
+	int luck = 2;
+	int spirit = 2;
+	int endurance = 5;
+private:
+};
+
+class Archer
+{
+public:
+	int hpMultiplier = 16;
+	int mpMultiplier = 16;
+	int addHpMultiplier = 3;
+	int addMpMultiplier = 4;
+
+	int physicalStrength = 13;
+	int physicalStability = 4;
+	int magicalStrength = 4;
+	int magicalStability = 1;
+	int agility = 7;
+	int rhetoric = 2;
+	int luck = 4;
+	int spirit = 4;
+	int endurance = 3;
+private:
+};
+
+class Thief
+{
+public:
+	int hpMultiplier = 11;
+	int mpMultiplier = 15;
+	int addHpMultiplier = 3;
+	int addMpMultiplier = 4;
+
+	int physicalStrength = 12;
+	int physicalStability = 1;
+	int magicalStrength = 3;
+	int magicalStability = 1;
+	int agility = 15;
+	int rhetoric = 3;
+	int luck = 5;
+	int spirit = 2;
+	int endurance = 5;
+private:
+};
+
+class Novice
+{
+public:
+	int hpMultiplier = 10;
+	int mpMultiplier = 26;
+	int addHpMultiplier = 4;
+	int addMpMultiplier = 5;
+
+	int physicalStrength = 5;
+	int physicalStability = 2;
+	int magicalStrength = 11;
+	int magicalStability = 3;
+	int agility = 3;
+	int rhetoric = 1;
+	int luck = 5;
+	int spirit = 7;
+	int endurance = 4;
+private:
+};
+
+class Mage
+{
+public:
+	int hpMultiplier = 12;
+	int mpMultiplier = 32;
+	int addHpMultiplier = 3;
+	int addMpMultiplier = 7;
+
+	int physicalStrength = 1;
+	int physicalStability = 2;
+	int magicalStrength = 21;
+	int magicalStability = 3;
+	int agility = 1;
+	int rhetoric = 4;
+	int luck = 2;
+	int spirit = 10;
+	int endurance = 1;
+private:
+};
