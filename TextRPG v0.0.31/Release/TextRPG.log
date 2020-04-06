@@ -1,7 +1,7 @@
 ﻿  World.cpp
   Создание кода
-  1 of 243 functions ( 0.4%) were compiled, the rest were copied from previous compilation.
+  103 of 243 functions (42.4%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
-    1 functions had inline decision re-evaluated but remain unchanged
+    32 functions had inline decision re-evaluated but remain unchanged
   Создание кода завершено
   TextRPG.vcxproj -> D:\PDTR\PDTR\TextRPG v0.0.31\Release\TextRPG.exe

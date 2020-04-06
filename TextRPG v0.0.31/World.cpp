@@ -86,30 +86,13 @@ void EnterTheWorld(maincharacter& mainCharacter, World& world)
 
 void HouseNearTheHills(maincharacter& mainCharacter, World& world)
 {
-	/*mainCharacter.characterLevel = 10;
-	GetRole(mainCharacter, "Warrior");
-	mainCharacter.physicalStrength = 200;
-	CQACount(mainCharacter);*/
+	mainCharacter.characterLevel = 10;
+	
+	CQACount(mainCharacter);
 	system("cls");
 	for (;;)
 	{
 		std::cout << "Дом Возле Полей " << std::endl;
-
-		world.TimeShow();
-		world.AddTimeMinutes(75);
-
-		system("pause");
-		world.TimeShow();
-		world.AddTimeHours(23);
-
-		system("pause");
-		world.TimeShow();
-		world.AddTimeDays(366);
-
-		system("pause");
-		world.TimeShow();
-		world.AddTimeYears(1);
-		system("pause");
 
 		std::cout << "Выберите, куда пойти: \n1-Ворота Города\n2-Зелёный Лес\n8-Персонаж\n9-Настройки\n0-Выйти из игры" << std::endl;
 		int* choose = new int;
