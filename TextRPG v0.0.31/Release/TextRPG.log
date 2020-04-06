@@ -1,16 +1,7 @@
-﻿  BattleSystem.cpp
-  Items.cpp
-  World.cpp
-  attributes.cpp
-  enemies.cpp
-C:\Users\zhora\source\repos\TextRPG\enemies.cpp(10,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
-C:\Users\zhora\source\repos\TextRPG\enemies.cpp(27,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
-  game.cpp
-  gameSource.cpp
-  resources.cpp
+﻿  World.cpp
   Создание кода
-  86 of 243 functions (35.4%) were compiled, the rest were copied from previous compilation.
-    27 functions were new in current compilation
-    33 functions had inline decision re-evaluated but remain unchanged
+  1 of 243 functions ( 0.4%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    1 functions had inline decision re-evaluated but remain unchanged
   Создание кода завершено
-  TextRPG.vcxproj -> C:\Users\zhora\source\repos\TextRPG\Release\TextRPG.exe
+  TextRPG.vcxproj -> D:\PDTR\PDTR\TextRPG v0.0.31\Release\TextRPG.exe

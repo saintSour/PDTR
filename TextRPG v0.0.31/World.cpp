@@ -4,6 +4,7 @@
 #include "World.h"
 #include "BattleSystem.h"
 #include "Attributes.h"
+#include "game.h"
 
 //
 void CharacterMenu(maincharacter& mainCharacter)
@@ -85,7 +86,10 @@ void EnterTheWorld(maincharacter& mainCharacter, World& world)
 
 void HouseNearTheHills(maincharacter& mainCharacter, World& world)
 {
-	//mainCharacter.characterLevel = 10;
+	/*mainCharacter.characterLevel = 10;
+	GetRole(mainCharacter, "Warrior");
+	mainCharacter.physicalStrength = 200;
+	CQACount(mainCharacter);*/
 	system("cls");
 	for (;;)
 	{
