@@ -22,6 +22,9 @@
     <Filter Include="Исходные файлы\Resources\Items">
       <UniqueIdentifier>{2f1c28ce-b076-43f6-8b7c-413f2d8a665a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Исходные файлы\Resources\Skills">
+      <UniqueIdentifier>{42f025d0-9700-4b57-ad12-34da7db8ef8d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="game.cpp">
@@ -54,6 +57,9 @@
     <ClCompile Include="Items.cpp">
       <Filter>Исходные файлы\Resources\Items</Filter>
     </ClCompile>
+    <ClCompile Include="Skills.cpp">
+      <Filter>Исходные файлы\Resources\Skills</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="game.h">
@@ -78,6 +84,12 @@
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="Items.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="SkillStock.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="Skills.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>

@@ -144,6 +144,7 @@
     <ClCompile Include="game.cpp" />
     <ClCompile Include="gameSource.cpp" />
     <ClCompile Include="Items.cpp" />
+    <ClCompile Include="Skills.cpp" />
     <ClCompile Include="Temporary.cpp" />
     <ClCompile Include="World.cpp" />
     <ClCompile Include="resources.cpp" />
@@ -157,6 +158,8 @@
     <ClInclude Include="Inventory.h" />
     <ClInclude Include="Items.h" />
     <ClInclude Include="Roles.h" />
+    <ClInclude Include="Skills.h" />
+    <ClInclude Include="SkillStock.h" />
     <ClInclude Include="World.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

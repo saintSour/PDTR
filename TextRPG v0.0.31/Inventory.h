@@ -1,5 +1,5 @@
 #pragma once
-#include <iostream> //необходимо пересмотреть выводы данный через std::sout
+#include <iostream> //необходимо пересмотреть выводы данный через std::cout
 #include <vector>
 
 //#include "Roles.h"
@@ -46,7 +46,7 @@ private:
 
 			while (inventory[(size - 1)].ID == 0)
 			{
-				inventory.erase(inventory.end() - 1); //доделать увеличение
+				inventory.erase(inventory.end() - 1);
 				//inventory.resize(--size);
 				size--;
 			}

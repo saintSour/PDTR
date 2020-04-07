@@ -123,23 +123,23 @@ void GetRole(maincharacter& mainCharacter, std::string roleType) // начальный вы
 {									// присваивание (наследование) персонажу начальных характеристик класса
 		if (roleType == "_")//исправить на нужный класс
 		{
-			_ warrior;
+			_ _;
 			mainCharacter.roleType = "Никто";
 
-			mainCharacter.physicalStrength = warrior.physicalStrength;
-			mainCharacter.physicalStability = warrior.physicalStability;
-			mainCharacter.magicalStrength = warrior.magicalStrength;
-			mainCharacter.magicalStability = warrior.magicalStability;
-			mainCharacter.agility = warrior.agility;
-			mainCharacter.rhetoric = warrior.rhetoric;
-			mainCharacter.luck = warrior.luck;
-			mainCharacter.spirit = warrior.spirit;
-			mainCharacter.endurance = warrior.endurance;
+			mainCharacter.physicalStrength += _.physicalStrength;
+			mainCharacter.physicalStability += _.physicalStability;
+			mainCharacter.magicalStrength += _.magicalStrength;
+			mainCharacter.magicalStability += _.magicalStability;
+			mainCharacter.agility += _.agility;
+			mainCharacter.rhetoric += _.rhetoric;
+			mainCharacter.luck += _.luck;
+			mainCharacter.spirit += _.spirit;
+			mainCharacter.endurance += _.endurance;
 
-			mainCharacter.hpMultiplier = warrior.hpMultiplier;
-			mainCharacter.mpMultiplier = warrior.mpMultiplier;
-			mainCharacter.addHpMultiplier = warrior.addHpMultiplier;
-			mainCharacter.addMpMultiplier = warrior.addMpMultiplier;
+			mainCharacter.hpMultiplier = _.hpMultiplier;
+			mainCharacter.mpMultiplier = _.mpMultiplier;
+			mainCharacter.addHpMultiplier = _.addHpMultiplier;
+			mainCharacter.addMpMultiplier = _.addMpMultiplier;
 		}
 		if (roleType == "Warrior")
 		{
@@ -147,15 +147,15 @@ void GetRole(maincharacter& mainCharacter, std::string roleType) // начальный вы
 			Warrior warrior;
 			mainCharacter.roleType = "Мечник";
 
-			mainCharacter.physicalStrength = warrior.physicalStrength;
-			mainCharacter.physicalStability = warrior.physicalStability;
-			mainCharacter.magicalStrength = warrior.magicalStrength;
-			mainCharacter.magicalStability = warrior.magicalStability;
-			mainCharacter.agility = warrior.agility;
-			mainCharacter.rhetoric = warrior.rhetoric;
-			mainCharacter.luck = warrior.luck;
-			mainCharacter.spirit = warrior.spirit;
-			mainCharacter.endurance = warrior.endurance;
+			mainCharacter.physicalStrength += warrior.physicalStrength;
+			mainCharacter.physicalStability += warrior.physicalStability;
+			mainCharacter.magicalStrength += warrior.magicalStrength;
+			mainCharacter.magicalStability += warrior.magicalStability;
+			mainCharacter.agility += warrior.agility;
+			mainCharacter.rhetoric += warrior.rhetoric;
+			mainCharacter.luck += warrior.luck;
+			mainCharacter.spirit += warrior.spirit;
+			mainCharacter.endurance += warrior.endurance;
 
 			mainCharacter.hpMultiplier = warrior.hpMultiplier;
 			mainCharacter.mpMultiplier = warrior.mpMultiplier;
@@ -167,15 +167,15 @@ void GetRole(maincharacter& mainCharacter, std::string roleType) // начальный вы
 			Archer archer;
 			mainCharacter.roleType = "Лучник";
 
-			mainCharacter.physicalStrength = archer.physicalStrength;
-			mainCharacter.physicalStability = archer.physicalStability;
-			mainCharacter.magicalStrength = archer.magicalStrength;
-			mainCharacter.magicalStability = archer.magicalStability;
-			mainCharacter.agility = archer.agility;
-			mainCharacter.rhetoric = archer.rhetoric;
-			mainCharacter.luck = archer.luck;
-			mainCharacter.spirit = archer.spirit;
-			mainCharacter.endurance = archer.endurance;
+			mainCharacter.physicalStrength += archer.physicalStrength;
+			mainCharacter.physicalStability += archer.physicalStability;
+			mainCharacter.magicalStrength += archer.magicalStrength;
+			mainCharacter.magicalStability += archer.magicalStability;
+			mainCharacter.agility += archer.agility;
+			mainCharacter.rhetoric += archer.rhetoric;
+			mainCharacter.luck += archer.luck;
+			mainCharacter.spirit += archer.spirit;
+			mainCharacter.endurance += archer.endurance;
 
 			mainCharacter.hpMultiplier = archer.hpMultiplier;
 			mainCharacter.mpMultiplier = archer.mpMultiplier;
@@ -187,15 +187,15 @@ void GetRole(maincharacter& mainCharacter, std::string roleType) // начальный вы
 			Thief thief;
 			mainCharacter.roleType = "Плут";
 
-			mainCharacter.physicalStrength = thief.physicalStrength;
-			mainCharacter.physicalStability = thief.physicalStability;
-			mainCharacter.magicalStrength = thief.magicalStrength;
-			mainCharacter.magicalStability = thief.magicalStability;
-			mainCharacter.agility = thief.agility;
-			mainCharacter.rhetoric = thief.rhetoric;
-			mainCharacter.luck = thief.luck;
-			mainCharacter.spirit = thief.spirit;
-			mainCharacter.endurance = thief.endurance;
+			mainCharacter.physicalStrength += thief.physicalStrength;
+			mainCharacter.physicalStability += thief.physicalStability;
+			mainCharacter.magicalStrength += thief.magicalStrength;
+			mainCharacter.magicalStability += thief.magicalStability;
+			mainCharacter.agility += thief.agility;
+			mainCharacter.rhetoric += thief.rhetoric;
+			mainCharacter.luck += thief.luck;
+			mainCharacter.spirit += thief.spirit;
+			mainCharacter.endurance += thief.endurance;
 
 			mainCharacter.hpMultiplier = thief.hpMultiplier;
 			mainCharacter.mpMultiplier = thief.mpMultiplier;
@@ -207,15 +207,15 @@ void GetRole(maincharacter& mainCharacter, std::string roleType) // начальный вы
 			Novice novice;
 			mainCharacter.roleType = "Послушник";
 
-			mainCharacter.physicalStrength = novice.physicalStrength;
-			mainCharacter.physicalStability = novice.physicalStability;
-			mainCharacter.magicalStrength = novice.magicalStrength;
-			mainCharacter.magicalStability = novice.magicalStability;
-			mainCharacter.agility = novice.agility;
-			mainCharacter.rhetoric = novice.rhetoric;
-			mainCharacter.luck = novice.luck;
-			mainCharacter.spirit = novice.spirit;
-			mainCharacter.endurance = novice.endurance;
+			mainCharacter.physicalStrength += novice.physicalStrength;
+			mainCharacter.physicalStability += novice.physicalStability;
+			mainCharacter.magicalStrength += novice.magicalStrength;
+			mainCharacter.magicalStability += novice.magicalStability;
+			mainCharacter.agility += novice.agility;
+			mainCharacter.rhetoric += novice.rhetoric;
+			mainCharacter.luck += novice.luck;
+			mainCharacter.spirit += novice.spirit;
+			mainCharacter.endurance += novice.endurance;
 
 			mainCharacter.hpMultiplier = novice.hpMultiplier;
 			mainCharacter.mpMultiplier = novice.mpMultiplier;
@@ -227,15 +227,15 @@ void GetRole(maincharacter& mainCharacter, std::string roleType) // начальный вы
 			Mage mage;
 			mainCharacter.roleType = "Волшебник";
 
-			mainCharacter.physicalStrength = mage.physicalStrength;
-			mainCharacter.physicalStability = mage.physicalStability;
-			mainCharacter.magicalStrength = mage.magicalStrength;
-			mainCharacter.magicalStability = mage.magicalStability;
-			mainCharacter.agility = mage.agility;
-			mainCharacter.rhetoric = mage.rhetoric;
-			mainCharacter.luck = mage.luck;
-			mainCharacter.spirit = mage.spirit;
-			mainCharacter.endurance = mage.endurance;
+			mainCharacter.physicalStrength += mage.physicalStrength;
+			mainCharacter.physicalStability += mage.physicalStability;
+			mainCharacter.magicalStrength += mage.magicalStrength;
+			mainCharacter.magicalStability += mage.magicalStability;
+			mainCharacter.agility += mage.agility;
+			mainCharacter.rhetoric += mage.rhetoric;
+			mainCharacter.luck += mage.luck;
+			mainCharacter.spirit += mage.spirit;
+			mainCharacter.endurance += mage.endurance;
 
 			mainCharacter.hpMultiplier = mage.hpMultiplier;
 			mainCharacter.mpMultiplier = mage.mpMultiplier;

@@ -2,7 +2,6 @@
 #include <string>
 
 #include "Roles.h"
-#include "Enemies.h"
 
 class Enemy : public Actors
 {
@@ -50,7 +49,9 @@ public:
 	int initiative;
 	std::string enteringPhrase; //дл€ генератора фраз и изменени€ в зависимости от противника
 
-	void standartPhysAttack(Enemy& attacker, maincharacter& defender)
+	std::vector<void (*)(Enemy&, maincharacter)> skillStock; //€чейки дл€ скиллов
+
+	/*void standartPhysAttack(Enemy& attacker, maincharacter& defender)
 	{
 		srand(10);
 		if (attacker.accuracy <= (size_t(rand() % 100 + 1)))
@@ -63,7 +64,7 @@ public:
 			system("pause");
 			system("cls");
 		}
-	}
+	}*/
 };
 
 class Melee //“ипы врагов

@@ -65,7 +65,7 @@ void BattleStart(maincharacter& mainCharacter, std::vector<Enemy>& enemies) //сд
 					//i++;
 					continue;
 				}
-				enemies[(i - 1)].standartPhysAttack(enemies[(i - 1)], mainCharacter);//атака ребят
+				//enemies[(i - 1)].standartPhysAttack(enemies[(i - 1)], mainCharacter);//атака ребят
 			}
 			else
 			{
@@ -78,7 +78,7 @@ void BattleStart(maincharacter& mainCharacter, std::vector<Enemy>& enemies) //сд
 						//i++;
 						continue;
 					}
-					enemies[(i - 1)].standartPhysAttack(enemies[(i - 1)], mainCharacter);//атака ребят
+					//enemies[(i - 1)].standartPhysAttack(enemies[(i - 1)], mainCharacter);//атака ребят
 				}
 				else
 				{

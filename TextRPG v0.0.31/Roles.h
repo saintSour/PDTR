@@ -6,6 +6,9 @@
 #include <iterator>
 
 #include "Inventory.h"
+#include "SkillStock.h"
+
+class Enemy;
 class Actors
 {
 public:
@@ -146,6 +149,7 @@ public:
 	}
 
 	public: Inventory inventory; //инвентарь персонажа
+			SkillStock skills; //способности персонажа
 };
 /*class Inventory : private maincharacter
 {
