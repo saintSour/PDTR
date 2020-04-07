@@ -14,6 +14,7 @@ void Game()
 	maincharacter mainCharacter;
 	World world;
 	GetRole(mainCharacter, "_");
+	mainCharacter.characterLevel = 1;
 	EnterTheWorld(mainCharacter, world);
 
 	/*while (gameActive)

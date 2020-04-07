@@ -124,7 +124,7 @@ void GetRole(maincharacter& mainCharacter, std::string roleType) // начальный вы
 		if (roleType == "_")//исправить на нужный класс
 		{
 			_ warrior;
-			mainCharacter.roleType = "Долбоёб";
+			mainCharacter.roleType = "Никто";
 
 			mainCharacter.physicalStrength = warrior.physicalStrength;
 			mainCharacter.physicalStability = warrior.physicalStability;

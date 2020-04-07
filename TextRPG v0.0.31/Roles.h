@@ -82,7 +82,8 @@ private:
 		/*for (int i = 0; i < 100; i++) //debug
 		{
 			std::cout << "Óðîâåíü " << (i + 1) << "Êîë-âî îïûòà " << std::fixed << std::setprecision(0) << levelsOfExperience[i] << std::endl;
-		}*/
+		}
+		system("pause");*/
 	}
 	void setLevelOfCharacter()
 	{
@@ -155,10 +156,10 @@ public:
 class _
 {
 public:
-	int hpMultiplier = 28; //îñòàâèë ÂÎÂÎ×ÊÅ ÁËßÒÜ ÅÑËÈ ×ÒÎ
-	int mpMultiplier = 12;
-	int addHpMultiplier = 6;
-	int addMpMultiplier = 3;
+	int hpMultiplier = 10; //îñòàâèë ÂÎÂÎ×ÊÅ ÁËßÒÜ ÅÑËÈ ×ÒÎ
+	int mpMultiplier = 8;
+	int addHpMultiplier = 3;
+	int addMpMultiplier = 2;
 
 	int physicalStrength = 0;
 	int physicalStability = 0;
@@ -172,12 +173,13 @@ public:
 private:
 };
 
-class Warrior //õàðàêòåðèñòèêè èãðîâûõ êëàññîâ
+class Warrior //õàðàêòåðèñòèêè èãðîâ1
+	
 {
 public:
-	int hpMultiplier = 28;
-	int mpMultiplier = 12;
-	int addHpMultiplier = 6;
+	int hpMultiplier = 29;
+	int mpMultiplier = 11;
+	int addHpMultiplier = 7;
 	int addMpMultiplier = 3;
 
 	int physicalStrength = 6;
@@ -195,9 +197,9 @@ private:
 class Archer
 {
 public:
-	int hpMultiplier = 16;
+	int hpMultiplier = 18;
 	int mpMultiplier = 16;
-	int addHpMultiplier = 3;
+	int addHpMultiplier = 4;
 	int addMpMultiplier = 4;
 
 	int physicalStrength = 13;
@@ -215,9 +217,9 @@ private:
 class Thief
 {
 public:
-	int hpMultiplier = 11;
+	int hpMultiplier = 22;
 	int mpMultiplier = 15;
-	int addHpMultiplier = 3;
+	int addHpMultiplier = 5;
 	int addMpMultiplier = 4;
 
 	int physicalStrength = 12;
@@ -235,9 +237,9 @@ private:
 class Novice
 {
 public:
-	int hpMultiplier = 10;
+	int hpMultiplier = 15;
 	int mpMultiplier = 26;
-	int addHpMultiplier = 4;
+	int addHpMultiplier = 3;
 	int addMpMultiplier = 5;
 
 	int physicalStrength = 5;
@@ -255,9 +257,9 @@ private:
 class Mage
 {
 public:
-	int hpMultiplier = 12;
-	int mpMultiplier = 32;
-	int addHpMultiplier = 3;
+	int hpMultiplier = 16;
+	int mpMultiplier = 31;
+	int addHpMultiplier = 4;
 	int addMpMultiplier = 7;
 
 	int physicalStrength = 1;

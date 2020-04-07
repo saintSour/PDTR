@@ -87,7 +87,8 @@ void EnterTheWorld(maincharacter& mainCharacter, World& world)
 void HouseNearTheHills(maincharacter& mainCharacter, World& world)
 {
 	mainCharacter.characterLevel = 10;
-	
+	GetRole(mainCharacter, "Warrior");
+	mainCharacter.characterLevel = 20;
 	CQACount(mainCharacter);
 	system("cls");
 	for (;;)

@@ -50,10 +50,10 @@ void PhysMagDamageCount(maincharacter& mainCharacter) //расчёт максимума фд и мд
 {
 	int initialPhysDamage = mainCharacter.GetInitialPhysDamage();
 	int initialMagDamage = mainCharacter.GetInitialMagDamage();
-	int helpPD = 0;
+	/*int helpPD = 0;
 	int helpMD = 0;
 
-	/*for (int i = 0; i < mainCharacter.characterLevel; i++)
+	for (int i = 0; i < mainCharacter.characterLevel; i++)
 	{
 		initialPhysDamage = initialPhysDamage + helpPD;
 		initialMagDamage = initialMagDamage + helpMD;
@@ -87,7 +87,7 @@ void EnemyMaxActionPointsCount(Enemy& enemy)
 
 void MaxWeightCount(maincharacter& mainCharacter)
 {
-	int maxWeight = 35 + (mainCharacter.physicalStrength * 7);
+	int maxWeight = 35 + (mainCharacter.physicalStrength * 2) + (mainCharacter.physicalStability * 6);
 	mainCharacter.maxWeight = maxWeight;
 }
 
