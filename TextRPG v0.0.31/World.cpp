@@ -89,8 +89,8 @@ void HouseNearTheHills(maincharacter& mainCharacter, World& world)
 	mainCharacter.characterLevel = 10;
 	GetRole(mainCharacter, "Warrior");
 	mainCharacter.characterLevel = 20;
-	//mainCharacter.skills.GetSkill();
-	//mainCharacter.skills.UseSkill(mainCharacter);
+	mainCharacter.skills.GetSkill();
+	mainCharacter.skills.UseSkill(mainCharacter);
 	CQACount(mainCharacter);
 	system("cls");
 	for (;;)

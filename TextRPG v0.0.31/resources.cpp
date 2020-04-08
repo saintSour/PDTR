@@ -1,6 +1,7 @@
 #include <iostream>
 
 #include "Roles.h"
+#include "Attributes.h"
 
 /*void GetRole(maincharacter& mainCharacter, int roleChoise) // начальный выбор роли главного персонажа
 {
@@ -140,6 +141,7 @@ void GetRole(maincharacter& mainCharacter, std::string roleType) // начальный вы
 			mainCharacter.mpMultiplier = _.mpMultiplier;
 			mainCharacter.addHpMultiplier = _.addHpMultiplier;
 			mainCharacter.addMpMultiplier = _.addMpMultiplier;
+			CQACount(mainCharacter);
 		}
 		if (roleType == "Warrior")
 		{
@@ -161,6 +163,7 @@ void GetRole(maincharacter& mainCharacter, std::string roleType) // начальный вы
 			mainCharacter.mpMultiplier = warrior.mpMultiplier;
 			mainCharacter.addHpMultiplier = warrior.addHpMultiplier;
 			mainCharacter.addMpMultiplier = warrior.addMpMultiplier;
+			CQACount(mainCharacter);
 		}
 		if (roleType == "Archer")
 		{
@@ -181,6 +184,7 @@ void GetRole(maincharacter& mainCharacter, std::string roleType) // начальный вы
 			mainCharacter.mpMultiplier = archer.mpMultiplier;
 			mainCharacter.addHpMultiplier = archer.addHpMultiplier;
 			mainCharacter.addMpMultiplier = archer.addMpMultiplier;
+			CQACount(mainCharacter);
 		}
 		if (roleType == "Thief")
 		{
@@ -201,6 +205,7 @@ void GetRole(maincharacter& mainCharacter, std::string roleType) // начальный вы
 			mainCharacter.mpMultiplier = thief.mpMultiplier;
 			mainCharacter.addHpMultiplier = thief.addHpMultiplier;
 			mainCharacter.addMpMultiplier = thief.addMpMultiplier;
+			CQACount(mainCharacter);
 		}
 		if (roleType == "Novice")
 		{
@@ -221,6 +226,7 @@ void GetRole(maincharacter& mainCharacter, std::string roleType) // начальный вы
 			mainCharacter.mpMultiplier = novice.mpMultiplier;
 			mainCharacter.addHpMultiplier = novice.addHpMultiplier;
 			mainCharacter.addMpMultiplier = novice.addMpMultiplier;
+			CQACount(mainCharacter);
 		}
 		if (roleType == "Mage")
 		{
@@ -241,5 +247,6 @@ void GetRole(maincharacter& mainCharacter, std::string roleType) // начальный вы
 			mainCharacter.mpMultiplier = mage.mpMultiplier;
 			mainCharacter.addHpMultiplier = mage.addHpMultiplier;
 			mainCharacter.addMpMultiplier = mage.addMpMultiplier;
+			CQACount(mainCharacter);
 		}
 }
