@@ -13,7 +13,7 @@ void CharacterMenu(maincharacter& mainCharacter)
 	{
 		system("cls");
 		std::cout << "Персонаж" << std::endl;
-		std::cout << "1-Сумка\n2-Характеристики\n3-Закрыть окно персонажа " << std::endl;
+		std::cout << "1-Сумка\n2-Характеристики\n3-Мирные способности\n4-Закрыть окно персонажа " << std::endl;
 		int* chooseH = new int;
 		std::cin >> *chooseH;
 		switch (*chooseH)
@@ -63,6 +63,13 @@ void CharacterMenu(maincharacter& mainCharacter)
 		{
 			system("cls");
 			delete chooseH;
+			mainCharacter.skills;
+			break;
+		}
+		case 4:
+		{
+			system("cls");
+			delete chooseH;
 			goOut = 1;
 			break;
 		}
@@ -89,8 +96,8 @@ void HouseNearTheHills(maincharacter& mainCharacter, World& world)
 	mainCharacter.characterLevel = 10;
 	GetRole(mainCharacter, "Warrior");
 	mainCharacter.characterLevel = 20;
-	mainCharacter.skills.GetSkill();
-	mainCharacter.skills.UseSkill(mainCharacter);
+	//mainCharacter.skills.GetSkill();
+	//mainCharacter.skills.UseSkill(mainCharacter);
 	CQACount(mainCharacter);
 	system("cls");
 	for (;;)

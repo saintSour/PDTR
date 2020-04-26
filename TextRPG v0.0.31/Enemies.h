@@ -49,7 +49,7 @@ public:
 	int initiative;
 	std::string enteringPhrase; //дл€ генератора фраз и изменени€ в зависимости от противника
 
-	std::vector<void (*)(Enemy&, maincharacter)> skillStock; //€чейки дл€ скиллов
+	std::vector<void (*)(Enemy&, maincharacter&)> skillStock; //€чейки дл€ скиллов
 
 	/*void standartPhysAttack(Enemy& attacker, maincharacter& defender)
 	{
