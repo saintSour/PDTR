@@ -1,7 +1,36 @@
-﻿  World.cpp
+﻿  BattleSystem.cpp
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\SkillStock.h(111,22): warning C4018: <: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\SkillStock.h(118,16): warning C4018: >: несоответствие типов со знаком и без знака
+  Skills.cpp
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\SkillStock.h(111,22): warning C4018: <: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\SkillStock.h(118,16): warning C4018: >: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Skills.cpp(22,21): warning C4018: <=: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Skills.cpp(27,19): warning C4018: <=: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Skills.cpp(65,73): warning C4244: -=: преобразование "double" в "int", возможна потеря данных
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Skills.cpp(67,73): warning C4244: -=: преобразование "double" в "int", возможна потеря данных
+  World.cpp
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\SkillStock.h(111,22): warning C4018: <: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\SkillStock.h(118,16): warning C4018: >: несоответствие типов со знаком и без знака
+  attributes.cpp
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\SkillStock.h(111,22): warning C4018: <: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\SkillStock.h(118,16): warning C4018: >: несоответствие типов со знаком и без знака
+  enemies.cpp
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\SkillStock.h(111,22): warning C4018: <: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\SkillStock.h(118,16): warning C4018: >: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\enemies.cpp(10,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\enemies.cpp(27,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+  game.cpp
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\SkillStock.h(111,22): warning C4018: <: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\SkillStock.h(118,16): warning C4018: >: несоответствие типов со знаком и без знака
+  gameSource.cpp
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\SkillStock.h(111,22): warning C4018: <: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\SkillStock.h(118,16): warning C4018: >: несоответствие типов со знаком и без знака
+  resources.cpp
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\SkillStock.h(111,22): warning C4018: <: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\SkillStock.h(118,16): warning C4018: >: несоответствие типов со знаком и без знака
   Создание кода
-  17 of 308 functions ( 5.5%) were compiled, the rest were copied from previous compilation.
+  2 of 342 functions ( 0.6%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
-    1 functions had inline decision re-evaluated but remain unchanged
+    16 functions had inline decision re-evaluated but remain unchanged
   Создание кода завершено
   TextRPG.vcxproj -> D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Release\TextRPG.exe

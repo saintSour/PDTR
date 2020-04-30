@@ -63,7 +63,7 @@ void CharacterMenu(maincharacter& mainCharacter)
 		{
 			system("cls");
 			delete chooseH;
-			mainCharacter.skills;
+			mainCharacter.skills.UseSkill(mainCharacter);//
 			break;
 		}
 		case 4:
@@ -96,8 +96,8 @@ void HouseNearTheHills(maincharacter& mainCharacter, World& world)
 	mainCharacter.characterLevel = 10;
 	GetRole(mainCharacter, "Warrior");
 	mainCharacter.characterLevel = 20;
-	//mainCharacter.skills.GetSkill();
-	//mainCharacter.skills.UseSkill(mainCharacter);
+	mainCharacter.skills.GetSkill("BandageWounds");
+	mainCharacter.skills.GetSkill("DoubleStrike");
 	CQACount(mainCharacter);
 	system("cls");
 	for (;;)
@@ -166,23 +166,6 @@ void CastleGates(maincharacter& mainCharacter, World& world)
 	for (;;)
 	{
 		std::cout << "Ворота Города " << std::endl;
-
-		world.TimeShow();
-		world.AddTimeMinutes(75);
-
-		system("pause");
-		world.TimeShow();
-		world.AddTimeHours(23);
-
-		system("pause");
-		world.TimeShow();
-		world.AddTimeDays(366);
-
-		system("pause");
-		world.TimeShow();
-		world.AddTimeYears(1);
-		system("pause");
-
 		std::cout << "Выберите, куда пойти: \n1-Городской Центр\n2-Поляна За городом\n3-Зелёный Лес\n8-Персонаж\n9-Настройки\n0-Выйти из игры" << std::endl;
 		int* choose = new int;
 		std::cin >> *choose;
@@ -297,7 +280,7 @@ void GreenForest(maincharacter& mainCharacter, World& world)
 void DeepForest(maincharacter& mainCharacter, World& world)
 {
 	system("cls");
-	BattleAwakeCon(mainCharacter, "Snake", 4);
+	//BattleAwakeCon(mainCharacter, "Snake", 4);
 	for (;;)
 	{
 		std::cout << "Густой Лес " << std::endl;

@@ -37,11 +37,9 @@ int EnemyChoose(const std::vector<Enemy>& enemies)
 	std::cin >> enemyChoose;
 	return enemyChoose;
 }
-
-void BandageWounds(maincharacter& mainCharacter)
+// уменьшение МП и ОД за использования
+void BandageWounds(maincharacter& mainCharacter, int requiredMana, int requiredAP)
 {
-	int requiredMana = 4;
-	int requiredAP = 2;
 	if (CheckRequirements(mainCharacter, requiredMana, requiredAP))
 	{
 		int heal = 5; //количество восстановленного здоровья
@@ -49,17 +47,18 @@ void BandageWounds(maincharacter& mainCharacter)
 		mainCharacter.hitPoints += heal;
 		if (mainCharacter.hitPoints > mainCharacter.maxHitPoints)
 			mainCharacter.hitPoints = mainCharacter.maxHitPoints;
+
+		mainCharacter.manaPoints -= requiredMana;
+		mainCharacter.actionPoints -= requiredAP;
 	}
 	else UseFail(mainCharacter, requiredMana, requiredAP);
 	system("pause");
 	system("cls");
 }
 
-void DoubleStrike(maincharacter& mainCharacter, std::vector<Enemy>& enemies)
+void DoubleStrike(maincharacter& mainCharacter, int requiredMana, int requiredAP, std::vector<Enemy>& enemies)
 {
 	int enemyChoose;
-	int requiredMana = 8;
-	int requiredAP = 3;
 	enemyChoose = EnemyChoose(enemies);
 	if (CheckRequirements(mainCharacter, requiredMana, requiredAP))
 	{
@@ -67,6 +66,9 @@ void DoubleStrike(maincharacter& mainCharacter, std::vector<Enemy>& enemies)
 		std::cout << "Вы совершили первый удар " << std::endl;
 		enemies[enemyChoose].hitPoints -= (mainCharacter.physicalDamage * 0.8);
 		std::cout << "Вы совершили второй удар " << std::endl;
+
+		mainCharacter.manaPoints -= requiredMana;
+		mainCharacter.actionPoints -= requiredAP;
 	}
 	else UseFail(mainCharacter, requiredMana, requiredAP);
 	system("pause");

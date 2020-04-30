@@ -43,7 +43,6 @@ void quickEnemiesSort(std::vector<T>& actors, int left, int right) //сортировка 
 
 void BattleStart(maincharacter& mainCharacter, std::vector<Enemy>& enemies) //сделать мгновенную смерть
 {
-
 	bool mainCharacterTurn = false;
 	while ((mainCharacter.hitPoints > 0) && (!enemies.empty()))
 	{

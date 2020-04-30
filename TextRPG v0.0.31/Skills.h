@@ -2,14 +2,15 @@
 class maincharacter;
 class Enemy;
 
-//########################
-//   SECOND_TYPE_SKILLS
-//########################
-void BandageWounds(maincharacter& mainCharacter);
-//
 
 //########################
 //   FIRST_TYPE_SKILLS
 //########################
-void DoubleStrike(maincharacter& mainCharacter, std::vector<Enemy>& enemies);
+void DoubleStrike(maincharacter& mainCharacter, int requiredMana, int requiredAP, std::vector<Enemy>& enemies);
+//
+
+//########################
+//   SECOND_TYPE_SKILLS
+//########################
+void BandageWounds(maincharacter& mainCharacter, int requiredMana, int requiredAP);
 //
