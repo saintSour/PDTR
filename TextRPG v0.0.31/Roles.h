@@ -7,8 +7,11 @@
 
 #include "Inventory.h"
 #include "SkillStock.h"
+#include "BattleSystem.h"
 
-class Enemy;
+void CQACount(maincharacter& mainCharacter);
+
+
 class Actors
 {
 public:
@@ -41,6 +44,7 @@ public:
 
 	int physicalDamage;
 	int magicalDamage;
+	int blockCount;
 	double criticalChance;
 	double criticalRate;
 
@@ -66,7 +70,7 @@ public:
 	int endurance; //выносливость
 	//int initiative; //инициатива
 	int visibility; //заметность
-
+	
 	double maxWeight; //Максимальный вес
 	double dropChance; //Доп. Шанс выпадения лута
 
@@ -109,7 +113,19 @@ public:
 	{
 		countOfExperience += incCountOfExperience;
 		std::cout << "Вы получили " << incCountOfExperience << " опыта\n";
+		system("pause");
+		system("cls");
 		setLevelOfCharacter();
+	}
+
+	int GetCountOfExperience() //получение персонажем опыта
+	{
+		return countOfExperience;
+	}
+
+	void ShowCountOfExperience()
+	{
+		std::cout << "Количество опыта: " << levelsOfExperience[characterLevel] << "/" << levelsOfExperience[(characterLevel + 1)] << std::endl;
 	}
 
 	void characterUpdate(maincharacter& mainCharacter)
@@ -148,14 +164,95 @@ public:
 		this->initialActionPoints = initialActionPoints;
 	}
 
-	public: Inventory inventory; //инвентарь персонажа
-			SkillStock skills; //способности персонажа
-};
-/*class Inventory : private maincharacter
-{
+public: 
+		Inventory inventory; //инвентарь персонажа
+		SkillStock skills; //способности персонажа
+private:
+
+	void StandartAttack(maincharacter& mainCharacter, std::vector<Enemy>& enemies);//стандартное од для оружия + определение вынесено в Skills.cpp
+
+	void MaincharacterInfo(maincharacter& mainCharacter);
+
+	void EnemyInfo(std::vector<Enemy>& enemies);
+
 public:
-	std::vector<unsigned short> inventory;
-};*/
+
+	void APRegen()
+	{
+		this->actionPoints = this->maxActionPoints;
+	}
+
+	void MaincharacterTurn(maincharacter& mainCharacter, std::vector<Enemy>& enemies)
+	{
+		system("cls");
+		for (int goOut = 0; (mainCharacter.actionPoints > 0) || (goOut != 1);)
+		{
+			if (!enemies.empty())
+			{
+				std::cout << "Ваш ход" << std::endl;
+				std::cout << "1 - Атака оружием\n2 - Способности\n3 - Бездействие\n4 - Окно персонажа\n5 - Инвентарь\n6 - Осмотр противника" << std::endl;
+				int choose;
+				std::cin >> choose;
+				switch (choose)
+				{
+				case 1:
+				{
+					system("cls");
+					mainCharacter.StandartAttack(mainCharacter, enemies);
+					EnemyDeath(mainCharacter, enemies);
+
+					break;
+				}
+				case 2:
+				{
+					system("cls");
+					mainCharacter.skills.maincharacterSkillsUse(mainCharacter, enemies);
+					EnemyDeath(mainCharacter, enemies);
+
+					break;
+				}
+				case 3:
+				{
+					system("cls");
+					goOut = 1;
+					mainCharacter.actionPoints = 0;
+					EnemyDeath(mainCharacter, enemies);
+					break;
+				}
+				case 4:
+				{
+					system("cls");
+					mainCharacter.MaincharacterInfo(mainCharacter);
+
+					break;
+				}
+				case 5:
+				{
+					system("cls");
+					mainCharacter.inventory.InventoryShow();
+
+					break;
+				}
+				case 6:
+				{
+					system("cls");
+					mainCharacter.EnemyInfo(enemies);
+
+					break;
+				}
+				default:
+				{
+					std::cout << "Я не понимаю..." << std::endl;
+					system("pause");
+					system("cls");
+					break;
+				}
+				}
+			}
+		}
+	}
+};
+
 
 class _
 {

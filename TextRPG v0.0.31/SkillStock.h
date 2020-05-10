@@ -102,59 +102,104 @@ public:
 		}
 	}
 
-	void UseSkill(maincharacter& mainCharacter)
+	void maincharacterSkillsUse(maincharacter& mainCharacter, std::vector<Enemy>& enemies)
 	{
-		const int requiredAP = 0; // Трата ОД в мирное время || Она всегда равна нулю
-		//for (int goOut = 0; goOut == 0;)
-		//{
-			std::cout << "Какую способность применить?" << std::endl;
-			for (int i = 0; i < this->secondTypeSkills.size(); i++)
-			{
-				std::cout << (i+1) << ") " << this->secondTypeSkills[i].GetName() << std::endl;
-			}
-
-			int choose;
-			std::cin >> choose;
-			if ((choose > this->secondTypeSkills.size()) || (choose < 1)) { system("cls"); std::cout << "Я не понимаю..." << std::endl; system("pause"); system("cls"); }
-			else 
-			{ 
-				system("cls");
-				this->secondTypeSkills[(choose - 1)].UseSkill(mainCharacter, this->secondTypeSkills[0].GetRequiredMana(), requiredAP); 
-			}
-			//goOut = 1;
-		//}
-	}
-
-	void UseSkill(maincharacter& mainCharacter, std::vector<Enemy>& enemies)
-	{
-		for (int goOut = 0; goOut == 0;)
+		int choose;
+		for (int goOut = 0; goOut != 1;)
 		{
-			std::cout << "Какую способность применить?" << std::endl << "1 - Способность Атаки\n2 - Способность Защиты\n" << std::endl;
-			int i;
-			std::cin >> i;
-			switch (i)
+			system("cls");
+			std::cout << "Способность какого типа мне применить?\n1 - Первый тип\n2 - Второй тип\n0 - Отмена" << std::endl;//назвать типы способности
+			std::cin >> choose;
+
+			switch (choose)
 			{
 			case 1:
 			{
-				system("cls");
-				this->firstTypeSkills[0].UseSkill(mainCharacter, this->firstTypeSkills[0].GetRequiredMana(), this->firstTypeSkills[0].GetRequiredAP(), enemies);//
+				UseSkill(mainCharacter, enemies);
 				goOut = 1;
 				break;
 			}
 			case 2:
 			{
-				system("cls");
-				this->secondTypeSkills[0].UseSkill(mainCharacter, this->secondTypeSkills[0].GetRequiredMana(), this->secondTypeSkills[0].GetRequiredAP());//
+				UseSkill(mainCharacter);
+				goOut = 1;
+				break;
+			}
+			case 0:
+			{
 				goOut = 1;
 				break;
 			}
 			default:
 			{
-				std::cout << "Я не понимаю... " << std::endl;
+				std::cout << "Не понимаю" << std::endl;
+				system("pause");
+				system("cls");
 				break;
 			}
 			}
 		}
+	}
+
+	void UseSkill_World(maincharacter& mainCharacter)
+	{
+		const int requiredAP = 0; // Трата ОД в мирное время || Она всегда равна нулю
+		//for (int goOut = 0; goOut == 0;)
+		//{
+		system("cls");
+		std::cout << "Какую способность применить?" << std::endl;
+		for (int i = 0; i < this->secondTypeSkills.size(); i++)
+		{
+			std::cout << (i + 1) << ") " << this->secondTypeSkills[i].GetName() << std::endl;
+		}
+
+		int choose;
+		std::cin >> choose;
+		if ((choose > this->secondTypeSkills.size()) || (choose < 1)) { system("cls"); std::cout << "Я не понимаю..." << std::endl; system("pause"); system("cls"); }
+		else
+		{
+			system("cls");
+			this->secondTypeSkills[(choose - 1)].UseSkill(mainCharacter, this->secondTypeSkills[0].GetRequiredMana(), requiredAP);
+		}
+	}
+
+	void UseSkill(maincharacter& mainCharacter)
+	{
+		system("cls");
+		std::cout << "Какую способность применить?" << std::endl;
+		for (int i = 0; i < this->secondTypeSkills.size(); i++)
+		{
+			std::cout << (i + 1) << ") " << this->secondTypeSkills[i].GetName() << std::endl;
+		}
+
+		int choose;
+		std::cin >> choose;
+		if ((choose > this->secondTypeSkills.size()) || (choose < 1)) { system("cls"); std::cout << "Я не понимаю..." << std::endl; system("pause"); system("cls"); }
+		else 
+		{ 
+			system("cls");
+			this->secondTypeSkills[(choose - 1)].UseSkill(mainCharacter, this->secondTypeSkills[(choose - 1)].GetRequiredMana(),this->secondTypeSkills[(choose - 1)].GetRequiredAP());
+		}
+	}
+
+	void UseSkill(maincharacter& mainCharacter, std::vector<Enemy>& enemies)
+	{
+		system("cls");
+		std::cout << "Какую способность применить?" << std::endl;
+		for (int i = 0; i < this->firstTypeSkills.size(); i++)
+		{
+			std::cout << (i + 1) << ") " << this->firstTypeSkills[i].GetName() << std::endl;
+		}
+
+		int choose;
+		std::cin >> choose;
+		if ((choose > this->firstTypeSkills.size()) || (choose < 1)) { system("cls"); std::cout << "Я не понимаю..." << std::endl; system("pause"); system("cls"); }
+		else
+		{
+			system("cls");
+			this->firstTypeSkills[(choose - 1)].UseSkill(mainCharacter, this->firstTypeSkills[(choose - 1)].GetRequiredMana(), this->firstTypeSkills[(choose - 1)].GetRequiredAP(), enemies);
+		}
+
 	}
 };
 

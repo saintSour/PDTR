@@ -41,88 +41,79 @@ void quickEnemiesSort(std::vector<T>& actors, int left, int right) //сортировка 
 
 }
 
+void EnemyDeath(maincharacter& mainCharacter, std::vector<Enemy>& enemies)
+{
+	for (int i = 0; i < enemies.size(); i++)
+	{
+		if (enemies[i].hitPoints <= 0) 
+		{
+			std::cout << enemies[i].enemyType << " умер " << std::endl;
+			mainCharacter.setCountOfExperience(enemies[i].experience);
+			enemies.erase(enemies.begin() + i);
+		}
+	}
+}
+
+void EndTurn(bool& mainCharacterTurn, maincharacter& mainCharacter, std::vector<Enemy>& enemies)
+{
+	mainCharacterTurn = false;
+	mainCharacter.APRegen();
+	/*for (auto i = 0; i < enemies.size(); i++)
+	{
+		enemies[i].APRegen();
+	}*/
+}
+
 void BattleStart(maincharacter& mainCharacter, std::vector<Enemy>& enemies) //сделать мгновенную смерть
 {
+	std::cout << "Ќа ¬ас напал " << enemies[0].enemyType << std::endl;
 	bool mainCharacterTurn = false;
+	mainCharacter.APRegen();
+
 	while ((mainCharacter.hitPoints > 0) && (!enemies.empty()))
 	{
 		mainCharacter.initiative = 7; //временна€ проверка
-		enemies[0].initiative = 7;
-		enemies[1].initiative = 1;
-		enemies[2].initiative = 3;
-		enemies[3].initiative = 9;
+
 		quickEnemiesSort(enemies, 0, enemies.size());//добавление гг в вектор и последующа€ сортировка
 
-		for (int i = enemies.size(); i >= 0; i--)
+		for (int i = enemies.size(); i > 0; i--)
 		{
-			if (i > 1) //чтобы не было доступа к внешней пам€ти (об€зательно) || добавить try/catch
+			if (i > 1)
 			{
-				if ((mainCharacter.initiative >= enemies[(i - 1)].initiative) /*&& (mainCharacter.initiative >= enemies[(i - 2)].initiative)*/ && (!mainCharacterTurn))
+				if ((mainCharacter.initiative >= enemies[(i - 1)].initiative) && (!mainCharacterTurn))
 				{
-					std::cout << "атакует персонаж " << std::endl;//атака персонажа
+					mainCharacter.MaincharacterTurn(mainCharacter, enemies);//логика персонажа
 					mainCharacterTurn = true;
-					//i++;
+					EnemyDeath(mainCharacter, enemies);
+					i++;
 					continue;
 				}
-				//enemies[(i - 1)].standartPhysAttack(enemies[(i - 1)], mainCharacter);//атака реб€т
+				else { enemies[(i - 1)].standartPhysAttack(enemies[(i - 1)], mainCharacter); EnemyDeath(mainCharacter, enemies); }//логика реб€т
 			}
-			else
+			else 
 			{
 				if (i == 1)
 				{
 					if ((mainCharacter.initiative > enemies[(i - 1)].initiative) && (!mainCharacterTurn))
 					{
-						std::cout << "атакует персонаж " << std::endl;//атака персонажа
+						mainCharacter.MaincharacterTurn(mainCharacter, enemies);//логика персонажа
 						mainCharacterTurn = true;
-						//i++;
+						EnemyDeath(mainCharacter, enemies);
+						i++;
 						continue;
 					}
-					//enemies[(i - 1)].standartPhysAttack(enemies[(i - 1)], mainCharacter);//атака реб€т
-				}
-				else
-				{
-					if (!mainCharacterTurn)
-					{
-						std::cout << "ебенит перс " << std::endl;//атака персонажа
-						mainCharacterTurn = true;
-						//i++;
-						continue;
-					}
-					//enemies[(i - 1)].standartPhysAttack(enemies[(i - 1)], mainCharacter);//атака мудозвонов
+					else { enemies[(i - 1)].standartPhysAttack(enemies[(i - 1)], mainCharacter); EnemyDeath(mainCharacter, enemies); }//логика реб€т
 				}
 			}
 		}
-		mainCharacterTurn = false;
+		EnemyDeath(mainCharacter, enemies);
+		EndTurn(mainCharacterTurn, mainCharacter, enemies);
 		system("pause");
-	}
-	std::cout << "ѕерсонаж погиб... " << std::endl;
-
-	/*while (mainCharacter.hitPoints >= 0 && enemy.hitPoints >= 0) // битва продолжаетс€, пока кто-то не умрЄт
-	{
-		mainCharacter.characterUpdate();
-		std::cout << "HP " << mainCharacter.hitPoints << " MP " << mainCharacter.manaPoints << "\n";
-		std::cout << "HP " << enemy.hitPoints << " " << enemy.enemyType << "\n\n";
-		std::cout << "Ќажми пробел, чтобы атаковать(разумеетс€, € это изменю)" << std::endl;
-		system("pause");
-
-		std::cout << "¬аше лицо переполн€етс€ гневом \n"; //изменить в следующем обновлении!!!
-		Sleep(1000);
-		std::cout << "¬ы замахиваетесь \n";
-		Sleep(1000);
-		std::cout << "» совершаете удар такой силы, который способен расколоть планету!\n" << "Ќу или почти...\n";
-		Sleep(1000);
-		enemy.hitPoints -= mainCharacter.physicalDamage; // исправить в следующем обновлении!!!
 		system("cls");
 	}
-	if (enemy.hitPoints <= 0)
-	{
-		std::cout << "» пал противник " << enemy.enemyType << " от руки его т€жЄлой...\n"; //генератор фраз(смерть противника)
-		mainCharacter.setCountOfExperience(100);
-	}
-	else 
-	{
-		std::cout << "¬ этом бою великий " << mainCharacter.roleType << " был повержен, но значит ли, что это конец истории?\n"; //генератор фраз(смерть главного геро€)
-	}*/
+	//EndBattle();
+	//std::cout << "ѕерсонаж погиб... " << std::endl;
+
 }
 
 void BattleAwake(maincharacter& mainCharacter)

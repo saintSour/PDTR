@@ -17,19 +17,6 @@ void Game()
 	mainCharacter.characterLevel = 1;
 	EnterTheWorld(mainCharacter, world);
 
-	/*while (gameActive)
-	{
-		mainCharacter.characterLevel = 27;
-
-		CQACount(mainCharacter);
-		CQADebug(mainCharacter); // Временная функция
-
-		system("pause");
-
-		BattleAwake(mainCharacter);
-		system("pause");
-	}*/
-
 	system("pause");
 }
 

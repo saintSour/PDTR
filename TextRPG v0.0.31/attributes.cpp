@@ -111,9 +111,14 @@ void EnemyCriticalChanceCount(Enemy& enemy)
 
 void BlockChanceCount(maincharacter& mainCharacter)
 {
-	double blockChance = (mainCharacter.physicalStability * 0.3);
+	double blockChance = (mainCharacter.physicalStability * 0.3);//+ от снаряги
 	if (blockChance > 35) blockChance = 35;
 	mainCharacter.blockChance = blockChance;
+}
+
+void BlockCount(maincharacter& mainCharacter)
+{
+	mainCharacter.blockCount = 0;
 }
 
 void EnemyBlockChanceCount(Enemy& enemy)
@@ -183,6 +188,7 @@ void CQACount(maincharacter& mainCharacter) //завершить к следующему обновлению
 	MaxWeightCount(mainCharacter);
 	CriticalChanceCount(mainCharacter);
 	BlockChanceCount(mainCharacter);
+	BlockCount(mainCharacter);
 	InitiativeCount(mainCharacter);
 	VisibilityCount(mainCharacter);
 	DodgeChanceCount(mainCharacter);

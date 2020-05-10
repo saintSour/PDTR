@@ -38,6 +38,20 @@ public:
 
 	int physicalDamage;
 	int magicalDamage;
+	int blockCount;
+
+	int physicalStability;
+	int magicalStability;
+
+	int physicalStrength; //нерабочий вариант
+	int magicalStrength;
+
+	int agility; //ловкость
+	int rhetoric; //красноречие, а-л€ убеждение
+	int luck; //удача
+	int spirit; //дух
+	int endurance; //выносливость
+	int visibility; //заметность
 
 	double blockChance;
 	double dodgeChance;
@@ -51,7 +65,7 @@ public:
 
 	std::vector<void (*)(Enemy&, maincharacter&)> skillStock; //€чейки дл€ скиллов
 
-	/*void standartPhysAttack(Enemy& attacker, maincharacter& defender)
+	void standartPhysAttack(Enemy& attacker, maincharacter& defender)
 	{
 		srand(10);
 		if (attacker.accuracy <= (size_t(rand() % 100 + 1)))
@@ -59,12 +73,12 @@ public:
 			std::cout << attacker.enemyType << " бьЄт по ¬ам и наносит " << attacker.physicalDamage << " урона" << std::endl;
 			//вывод текста об успешном нанесении урона
 			defender.hitPoints -= attacker.physicalDamage;
-			std::cout << "√лавный герой" << " HP " << defender.hitPoints << " MP " << defender.manaPoints << std::endl;
-			std::cout << attacker.enemyType << " HP " << attacker.hitPoints << " MP " << attacker.manaPoints << std::endl;
+			std::cout << "√лавный герой" << " HP " << defender.hitPoints << " MP " << defender.manaPoints << std::endl;//
+			std::cout << attacker.enemyType << " HP " << attacker.hitPoints << " MP " << attacker.manaPoints << std::endl;//
 			system("pause");
 			system("cls");
 		}
-	}*/
+	}
 };
 
 class Melee //“ипы врагов

@@ -32,6 +32,7 @@ void CharacterMenu(maincharacter& mainCharacter)
 			CQACount(mainCharacter);
 			std::cout << mainCharacter.roleType << std::endl;
 			std::cout << "Уровень = " << mainCharacter.characterLevel << std::endl;
+			mainCharacter.ShowCountOfExperience();
 			std::cout << "Очки здоровья = " << mainCharacter.hitPoints << '/' << mainCharacter.maxHitPoints << std::endl;
 			std::cout << "Очки маны = " << mainCharacter.manaPoints << '/' << mainCharacter.maxManaPoints << std::endl;
 			std::cout << "Физический урон = " << mainCharacter.physicalDamage << std::endl;
@@ -40,9 +41,9 @@ void CharacterMenu(maincharacter& mainCharacter)
 			std::cout << "Рейтинг критического урона = " << mainCharacter.criticalRate << std::endl;
 			std::cout << "Шанс блокирования = " << mainCharacter.blockChance << " %" << std::endl;
 			std::cout << "Шанс уклонения = " << mainCharacter.dodgeChance << " %" << std::endl;
-			std::cout << "Меткость = " << mainCharacter.accuracy << std::endl;
+			std::cout << "Меткость = " << " %" << mainCharacter.accuracy << std::endl;
 			std::cout << "Количество очков действий = " << mainCharacter.maxActionPoints << std::endl;
-			std::cout << "Количество классовых очков действий = " << mainCharacter.maxRoleActionPoints << std::endl;
+			std::cout << "Количество специальных очков действий = " << mainCharacter.maxRoleActionPoints << std::endl;
 			std::cout << "Физическая стойкость = " << mainCharacter.physicalStability << std::endl;
 			std::cout << "Магическая стойкость = " << mainCharacter.magicalStability << std::endl;
 			std::cout << "Физическая сила = " << mainCharacter.physicalStrength << std::endl;
@@ -63,7 +64,7 @@ void CharacterMenu(maincharacter& mainCharacter)
 		{
 			system("cls");
 			delete chooseH;
-			mainCharacter.skills.UseSkill(mainCharacter);//
+			mainCharacter.skills.UseSkill_World(mainCharacter);//
 			break;
 		}
 		case 4:
@@ -99,6 +100,8 @@ void HouseNearTheHills(maincharacter& mainCharacter, World& world)
 	mainCharacter.skills.GetSkill("BandageWounds");
 	mainCharacter.skills.GetSkill("DoubleStrike");
 	CQACount(mainCharacter);
+	mainCharacter.hitPoints = mainCharacter.maxHitPoints;
+	mainCharacter.manaPoints = mainCharacter.maxManaPoints;
 	system("cls");
 	for (;;)
 	{
@@ -280,7 +283,7 @@ void GreenForest(maincharacter& mainCharacter, World& world)
 void DeepForest(maincharacter& mainCharacter, World& world)
 {
 	system("cls");
-	//BattleAwakeCon(mainCharacter, "Snake", 4);
+	BattleAwakeCon(mainCharacter, "Snake", 2);
 	for (;;)
 	{
 		std::cout << "Густой Лес " << std::endl;

@@ -1,5 +1,5 @@
 #pragma once
-#include <iostream> //необходимо пересмотреть выводы данный через std::cout
+#include <iostream> //необходимо пересмотреть выводы данных через std::cout
 #include <vector>
 
 //#include "Roles.h"
@@ -91,5 +91,6 @@ public:
 			std::cout << std::endl;
 		}
 		system("pause");
+		system("cls");
 	}
 };

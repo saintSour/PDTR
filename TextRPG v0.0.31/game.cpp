@@ -19,23 +19,29 @@ int main(int argc, char* argv[]) //основная структура, включая меню
 		switch (choise)
 		{
 		case 49:
+		{
 			Game(); //тело игры
 			break;
-			
+		}
 
 		case 50:
+		{
 			Settings(); //настройки игры
 			break;
-
+		}
 
 		case 51:
+		{
 			ExitGame(); //выход из игры
 			break;
-
+		}
 
 		default:
+		{
 			std::cout << "Иди нахуй, обработчика исключений ещё нет\n"; //обработка исключений
+			system("pause");
 			break;
+		}
 		}
 		choise = 4993;
 	}
