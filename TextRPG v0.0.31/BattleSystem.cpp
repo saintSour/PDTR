@@ -102,7 +102,7 @@ void BattleStart(maincharacter& mainCharacter, std::vector<Enemy>& enemies) //сд
 						i++;
 						continue;
 					}
-					else { enemies[(i - 1)].standartPhysAttack(enemies[(i - 1)], mainCharacter); EnemyDeath(mainCharacter, enemies); }//логика ребят
+					else if (!enemies.empty()) { enemies[(i - 1)].standartPhysAttack(enemies[(i - 1)], mainCharacter); EnemyDeath(mainCharacter, enemies); }//логика ребят
 				}
 			}
 		}

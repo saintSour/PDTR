@@ -2,18 +2,18 @@
 
 #include "Roles.h"
 #include "World.h"
-#include "BattleSystem.h"
+#include "WorldLocations.h"
 #include "Attributes.h"
 #include "game.h"
-
+class maincharacter;
 //
-void CharacterMenu(maincharacter& mainCharacter)
+void CharacterMenu(maincharacter& mainCharacter, World& world)
 {
 	for (int goOut = 0; goOut == 0; )
 	{
 		system("cls");
 		std::cout << "Персонаж" << std::endl;
-		std::cout << "1-Сумка\n2-Характеристики\n3-Мирные способности\n4-Закрыть окно персонажа " << std::endl;
+		std::cout << "1-Сумка\n2-Характеристики\n3-Мирные способности\n4-Выбросить вещи\n5-Поискать предметы в локации\n0-Закрыть окно персонажа " << std::endl;
 		int* chooseH = new int;
 		std::cin >> *chooseH;
 		switch (*chooseH)
@@ -30,33 +30,7 @@ void CharacterMenu(maincharacter& mainCharacter)
 			system("cls");
 			delete chooseH;
 			CQACount(mainCharacter);
-			std::cout << mainCharacter.roleType << std::endl;
-			std::cout << "Уровень = " << mainCharacter.characterLevel << std::endl;
-			mainCharacter.ShowCountOfExperience();
-			std::cout << "Очки здоровья = " << mainCharacter.hitPoints << '/' << mainCharacter.maxHitPoints << std::endl;
-			std::cout << "Очки маны = " << mainCharacter.manaPoints << '/' << mainCharacter.maxManaPoints << std::endl;
-			std::cout << "Физический урон = " << mainCharacter.physicalDamage << std::endl;
-			std::cout << "Магический урон = " << mainCharacter.magicalDamage << std::endl;
-			std::cout << "Шанс критического урона = " << mainCharacter.criticalChance << " %" << std::endl;
-			std::cout << "Рейтинг критического урона = " << mainCharacter.criticalRate << std::endl;
-			std::cout << "Шанс блокирования = " << mainCharacter.blockChance << " %" << std::endl;
-			std::cout << "Шанс уклонения = " << mainCharacter.dodgeChance << " %" << std::endl;
-			std::cout << "Меткость = " << " %" << mainCharacter.accuracy << std::endl;
-			std::cout << "Количество очков действий = " << mainCharacter.maxActionPoints << std::endl;
-			std::cout << "Количество специальных очков действий = " << mainCharacter.maxRoleActionPoints << std::endl;
-			std::cout << "Физическая стойкость = " << mainCharacter.physicalStability << std::endl;
-			std::cout << "Магическая стойкость = " << mainCharacter.magicalStability << std::endl;
-			std::cout << "Физическая сила = " << mainCharacter.physicalStrength << std::endl;
-			std::cout << "Магическая сила = " << mainCharacter.magicalStrength << std::endl;
-			std::cout << "Ловкость = " << mainCharacter.agility << std::endl;
-			std::cout << "Красноречие = " << mainCharacter.rhetoric << std::endl;
-			std::cout << "Удача = " << mainCharacter.luck << std::endl;
-			std::cout << "Дух = " << mainCharacter.spirit << std::endl;
-			std::cout << "Выносливость = " << mainCharacter.endurance << std::endl;
-			std::cout << "Инициатива = " << mainCharacter.initiative << std::endl;
-			std::cout << "Заметность = " << mainCharacter.visibility << std::endl;
-			std::cout << "Максимальный вес = " << mainCharacter.maxWeight << std::endl;
-			std::cout << "Шанс выпадения лута = " << mainCharacter.dropChance << " %" << std::endl;
+			mainCharacter.MaincharacterInfo(mainCharacter);
 			system("pause");
 			break;
 		}
@@ -68,6 +42,18 @@ void CharacterMenu(maincharacter& mainCharacter)
 			break;
 		}
 		case 4:
+		{
+			delete chooseH;
+			world.DropItemOnTheGround(mainCharacter, world);
+			break;
+		}
+		case 5:
+		{
+			delete chooseH;
+			world.PickItemFromTheGround(mainCharacter, world);
+			break;
+		}
+		case 0:
 		{
 			system("cls");
 			delete chooseH;
@@ -93,15 +79,14 @@ void EnterTheWorld(maincharacter& mainCharacter, World& world)
 }
 
 void HouseNearTheHills(maincharacter& mainCharacter, World& world)
-{
+{ /**/ mainCharacter.SetLocation("HouseNearTheHills"); /**/
 	mainCharacter.characterLevel = 10;
 	GetRole(mainCharacter, "Warrior");
 	mainCharacter.characterLevel = 20;
-	mainCharacter.skills.GetSkill("BandageWounds");
-	mainCharacter.skills.GetSkill("DoubleStrike");
-	CQACount(mainCharacter);
-	mainCharacter.hitPoints = mainCharacter.maxHitPoints;
-	mainCharacter.manaPoints = mainCharacter.maxManaPoints;
+	/*mainCharacter.inventory.GetItem(1001);
+	mainCharacter.inventory.GetItem(1001);
+	world.DropItemOnTheGround(mainCharacter, world);
+	world.PickItemFromTheGround(mainCharacter, world);*/
 	system("cls");
 	for (;;)
 	{
@@ -128,7 +113,7 @@ void HouseNearTheHills(maincharacter& mainCharacter, World& world)
 		}
 		case 8:
 		{
-			CharacterMenu(mainCharacter);
+			CharacterMenu(mainCharacter, world);
 			delete choose;
 			break;
 		}
@@ -158,13 +143,14 @@ void HouseNearTheHills(maincharacter& mainCharacter, World& world)
 }
 
 void CastleGates(maincharacter& mainCharacter, World& world)
-{
-	/*mainCharacter.inventory.GetItem(1001);
-	mainCharacter.inventory.GetItem(1002);
-	mainCharacter.inventory.GetItem(1001);
-	mainCharacter.inventory.GetItem(1002);
-	system("pause");
-	*/
+{ /**/ mainCharacter.SetLocation("CastleGates"); /**/
+	//mainCharacter.inventory.GetItem(1001);
+	//mainCharacter.inventory.GetItem(1002);
+	//mainCharacter.inventory.GetItem(1001);
+	//mainCharacter.inventory.GetItem(1002);
+	//system("pause");
+	//world.WorldInventory.GetItem(mainCharacter, 1001);
+	//world.PickItemFromTheGround(mainCharacter, world);
 	system("cls");
 	for (;;)
 	{
@@ -197,7 +183,7 @@ void CastleGates(maincharacter& mainCharacter, World& world)
 		}
 		case 8:
 		{
-			CharacterMenu(mainCharacter);
+			CharacterMenu(mainCharacter, world);
 			delete choose;
 			break;
 		}
@@ -226,7 +212,7 @@ void CastleGates(maincharacter& mainCharacter, World& world)
 }
 
 void GreenForest(maincharacter& mainCharacter, World& world)
-{
+{ /**/ mainCharacter.SetLocation("GreenForest"); /**/
 	system("cls");
 	for (;;)
 	{
@@ -252,7 +238,7 @@ void GreenForest(maincharacter& mainCharacter, World& world)
 		}
 		case 8:
 		{
-			CharacterMenu(mainCharacter);
+			CharacterMenu(mainCharacter, world);
 			delete choose;
 			break;
 		}
@@ -281,9 +267,9 @@ void GreenForest(maincharacter& mainCharacter, World& world)
 }
 
 void DeepForest(maincharacter& mainCharacter, World& world)
-{
+{ /**/ mainCharacter.SetLocation("DeepForest"); /**/
 	system("cls");
-	BattleAwakeCon(mainCharacter, "Snake", 2);
+	BattleAwakeCon(mainCharacter, "Hog", 1);
 	for (;;)
 	{
 		std::cout << "Густой Лес " << std::endl;
@@ -308,7 +294,7 @@ void DeepForest(maincharacter& mainCharacter, World& world)
 		}
 		case 8:
 		{
-			CharacterMenu(mainCharacter);
+			CharacterMenu(mainCharacter, world);
 			delete choose;
 			break;
 		}
@@ -337,7 +323,7 @@ void DeepForest(maincharacter& mainCharacter, World& world)
 }
 
 void GladeNearTheCity(maincharacter& mainCharacter, World& world)
-{
+{ /**/ mainCharacter.SetLocation("GladeNearTheCity"); /**/
 	system("cls");
 	for (;;)
 	{
@@ -370,7 +356,7 @@ void GladeNearTheCity(maincharacter& mainCharacter, World& world)
 		}
 		case 8:
 		{
-			CharacterMenu(mainCharacter);
+			CharacterMenu(mainCharacter, world);
 			delete choose;
 			break;
 		}
@@ -399,7 +385,7 @@ void GladeNearTheCity(maincharacter& mainCharacter, World& world)
 }
 
 void MagesTower(maincharacter& mainCharacter, World& world)
-{
+{ /**/ mainCharacter.SetLocation("MagesTower"); /**/
 	system("cls");
 	for (;;)
 	{
@@ -418,7 +404,7 @@ void MagesTower(maincharacter& mainCharacter, World& world)
 		}
 		case 8:
 		{
-			CharacterMenu(mainCharacter);
+			CharacterMenu(mainCharacter, world);
 			delete choose;
 			break;
 		}
@@ -447,7 +433,7 @@ void MagesTower(maincharacter& mainCharacter, World& world)
 }
 
 void CastleCenter(maincharacter& mainCharacter, World& world)
-{
+{ /**/ mainCharacter.SetLocation("CastleCenter"); /**/
 	system("cls");
 	for (;;)
 	{
@@ -501,7 +487,7 @@ void CastleCenter(maincharacter& mainCharacter, World& world)
 		}
 		case 8:
 		{
-			CharacterMenu(mainCharacter);
+			CharacterMenu(mainCharacter, world);
 			delete choose;
 			break;
 		}
@@ -530,7 +516,7 @@ void CastleCenter(maincharacter& mainCharacter, World& world)
 }
 
 void GuildDistrict(maincharacter& mainCharacter, World& world)
-{
+{ /**/ mainCharacter.SetLocation("GuildDistrict"); /**/
 	system("cls");
 	for (;;)
 	{
@@ -577,7 +563,7 @@ void GuildDistrict(maincharacter& mainCharacter, World& world)
 		}
 		case 8:
 		{
-			CharacterMenu(mainCharacter);
+			CharacterMenu(mainCharacter, world);
 			delete choose;
 			break;
 		}
@@ -606,7 +592,7 @@ void GuildDistrict(maincharacter& mainCharacter, World& world)
 }
 
 void Marketplace(maincharacter& mainCharacter, World& world)
-{
+{ /**/ mainCharacter.SetLocation("Marketplace"); /**/
 	system("cls");
 	for (;;)
 	{
@@ -632,7 +618,7 @@ void Marketplace(maincharacter& mainCharacter, World& world)
 		}
 		case 8:
 		{
-			CharacterMenu(mainCharacter);
+			CharacterMenu(mainCharacter, world);
 			delete choose;
 			break;
 		}
@@ -661,7 +647,7 @@ void Marketplace(maincharacter& mainCharacter, World& world)
 }
 
 void Church(maincharacter& mainCharacter, World& world)
-{
+{ /**/ mainCharacter.SetLocation("Church"); /**/
 	system("cls");
 	for (;;)
 	{
@@ -687,7 +673,7 @@ void Church(maincharacter& mainCharacter, World& world)
 		}
 		case 8:
 		{
-			CharacterMenu(mainCharacter);
+			CharacterMenu(mainCharacter, world);
 			delete choose;
 			break;
 		}
@@ -716,7 +702,7 @@ void Church(maincharacter& mainCharacter, World& world)
 }
 
 void BlackSmith(maincharacter& mainCharacter, World& world)
-{
+{ /**/ mainCharacter.SetLocation("BlackSmith"); /**/
 	system("cls");
 	for (;;)
 	{
@@ -742,7 +728,7 @@ void BlackSmith(maincharacter& mainCharacter, World& world)
 		}
 		case 8:
 		{
-			CharacterMenu(mainCharacter);
+			CharacterMenu(mainCharacter, world);
 			delete choose;
 			break;
 		}
@@ -771,7 +757,7 @@ void BlackSmith(maincharacter& mainCharacter, World& world)
 }
 
 void CastleNook(maincharacter& mainCharacter, World& world)
-{
+{ /**/ mainCharacter.SetLocation("CastleNook"); /**/
 	system("cls");
 	for (;;)
 	{
@@ -790,7 +776,7 @@ void CastleNook(maincharacter& mainCharacter, World& world)
 		}
 		case 8:
 		{
-			CharacterMenu(mainCharacter);
+			CharacterMenu(mainCharacter, world);
 			delete choose;
 			break;
 		}
@@ -819,7 +805,7 @@ void CastleNook(maincharacter& mainCharacter, World& world)
 }
 
 void AdventurersGuild(maincharacter& mainCharacter, World& world)
-{
+{ /**/ mainCharacter.SetLocation("AdventurersGuild"); /**/
 	system("cls");
 	for (;;)
 	{
@@ -852,7 +838,7 @@ void AdventurersGuild(maincharacter& mainCharacter, World& world)
 		}
 		case 8:
 		{
-			CharacterMenu(mainCharacter);
+			CharacterMenu(mainCharacter, world);
 			delete choose;
 			break;
 		}
@@ -881,7 +867,7 @@ void AdventurersGuild(maincharacter& mainCharacter, World& world)
 }
 
 void ArchersGuild(maincharacter& mainCharacter, World& world)
-{
+{ /**/ mainCharacter.SetLocation("ArchersGuild"); /**/
 	system("cls");
 	for (;;)
 	{
@@ -907,7 +893,7 @@ void ArchersGuild(maincharacter& mainCharacter, World& world)
 		}
 		case 8:
 		{
-			CharacterMenu(mainCharacter);
+			CharacterMenu(mainCharacter, world);
 			delete choose;
 			break;
 		}
@@ -936,7 +922,7 @@ void ArchersGuild(maincharacter& mainCharacter, World& world)
 }
 
 void RoguesGuild(maincharacter& mainCharacter, World& world)
-{
+{ /**/ mainCharacter.SetLocation("RoguesGuild"); /**/
 	system("cls");
 	for (;;)
 	{
@@ -962,7 +948,7 @@ void RoguesGuild(maincharacter& mainCharacter, World& world)
 		}
 		case 8:
 		{
-			CharacterMenu(mainCharacter);
+			CharacterMenu(mainCharacter, world);
 			delete choose;
 			break;
 		}
@@ -991,7 +977,7 @@ void RoguesGuild(maincharacter& mainCharacter, World& world)
 }
 
 void WarriorsGuild(maincharacter& mainCharacter, World& world)
-{
+{ /**/ mainCharacter.SetLocation("WarriorsGuild"); /**/
 	system("cls");
 	for (;;)
 	{
@@ -1017,7 +1003,7 @@ void WarriorsGuild(maincharacter& mainCharacter, World& world)
 		}
 		case 8:
 		{
-			CharacterMenu(mainCharacter);
+			CharacterMenu(mainCharacter, world);
 			delete choose;
 			break;
 		}

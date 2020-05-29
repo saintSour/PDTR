@@ -4,13 +4,20 @@
 #include <iomanip>
 #include <vector>
 #include <iterator>
+#include <string>
 
-#include "Inventory.h"
+//#include "SUBSYSTEM_CLASSES.h"
+//#include "Inventory.h"//вызывает огромное количество ошибок
+/*#include "SkillStock.h"
+#include "BattleSystem.h"
+*/
 #include "SkillStock.h"
 #include "BattleSystem.h"
+#include "Inventory.h"
 
 void CQACount(maincharacter& mainCharacter);
-
+//class Inventory;//
+//class World;//
 
 class Actors
 {
@@ -21,6 +28,7 @@ public:
 	}
 	int initiative;
 };
+
 class maincharacter : public Actors
 {
 public:
@@ -30,6 +38,9 @@ public:
 	}
 
 	std::string roleType;
+private:
+	std::string location;
+public:
 	int characterLevel = 0;
 
 	int maxHitPoints = 21;
@@ -103,7 +114,7 @@ private:
 
 	int initialHitPoints = 21; //Ќачальные значени€
 	int initialManaPoints = 4;
-	int initialPhysDamage = 4;
+	int initialPhysDamage = 20;
 	int initialMagDamage = 0;
 	int initialActionPoints = 3;
 
@@ -163,6 +174,14 @@ public:
 	{
 		this->initialActionPoints = initialActionPoints;
 	}
+	std::string GetLocation()
+	{
+		return this->location;
+	}
+	void SetLocation(std::string location)
+	{
+		this->location = location;
+	}
 
 public: 
 		Inventory inventory; //инвентарь персонажа
@@ -171,11 +190,11 @@ private:
 
 	void StandartAttack(maincharacter& mainCharacter, std::vector<Enemy>& enemies);//стандартное од дл€ оружи€ + определение вынесено в Skills.cpp
 
-	void MaincharacterInfo(maincharacter& mainCharacter);
-
 	void EnemyInfo(std::vector<Enemy>& enemies);
 
 public:
+
+	void MaincharacterInfo(maincharacter& mainCharacter);
 
 	void APRegen()
 	{
@@ -249,8 +268,10 @@ public:
 				}
 				}
 			}
+			else break;
 		}
 	}
+
 };
 
 

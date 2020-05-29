@@ -25,6 +25,9 @@
     <Filter Include="Исходные файлы\Resources\Skills">
       <UniqueIdentifier>{42f025d0-9700-4b57-ad12-34da7db8ef8d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Файлы заголовков\SybSystem">
+      <UniqueIdentifier>{31bde93a-11e1-4312-9ac4-cf48fbc427f1}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="game.cpp">
@@ -94,6 +97,15 @@
     </ClInclude>
     <ClInclude Include="Damage.h">
       <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="WorldExtensions.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="WorldLocations.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="SUBSYSTEM_CLASSES.h">
+      <Filter>Файлы заголовков\SybSystem</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

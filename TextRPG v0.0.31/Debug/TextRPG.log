@@ -1,5 +1,14 @@
 ﻿  World.cpp
-  game.cpp
-  gameSource.cpp
-  Создание кода...
-  TextRPG.vcxproj -> C:\Users\zhora\source\repos\TextRPG\Debug\TextRPG.exe
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\SkillStock.h(151,21): warning C4018: <: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\SkillStock.h(158,15): warning C4018: >: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\SkillStock.h(170,21): warning C4018: <: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\SkillStock.h(177,15): warning C4018: >: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\SkillStock.h(189,21): warning C4018: <: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\SkillStock.h(196,15): warning C4018: >: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(100,22): warning C4018: <: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(106,16): warning C4018: >: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\WorldExtensions.h(159,22): warning C4018: <: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\WorldExtensions.h(165,16): warning C4018: >: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(113): warning C4715: Inventory::DropItemSub: значение возвращается не при всех путях выполнения
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\WorldExtensions.h(66): warning C4715: WorldInventory::FindLocation: значение возвращается не при всех путях выполнения
+  TextRPG.vcxproj -> D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Debug\TextRPG.exe

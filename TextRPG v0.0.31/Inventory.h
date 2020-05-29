@@ -2,17 +2,27 @@
 #include <iostream> //необходимо пересмотреть выводы данных через std::cout
 #include <vector>
 
-//#include "Roles.h"
 #include "Items.h"
+
+//////Для спокойствия компилятора//////
+//#include "SUBSYSTEM_CLASSES.h"/////
+//#include "World.h"
+//////Для спокойствия компилятора//////
 
 class Inventory //реализация инвентаря
 {
-public: Inventory()
-{
+public:
+	Inventory()
+	{
 
-}
+	}
+	friend class World;
+
 private:
+//protected:
 	std::vector<Items> inventory;
+
+private:
 
 	void InventoryRestack(std::vector<Items>& inventory) //перестановка(сортировка)
 	{
@@ -29,10 +39,10 @@ private:
 				inventory[(size_t(size) - 1)].ID = 0;
 			}
 		}
-		/*for (int i = 0; i < size; i++) //debug
-		{
-			std::cout << inventory[i].ID << std::endl;
-		}*/
+		//for (int i = 0; i < size; i++) //debug
+		//{
+		//	std::cout << inventory[i].ID << std::endl;
+		//}
 		std::cout << "\n\n\n";
 		InventoryResize(inventory);
 	}
@@ -74,12 +84,60 @@ public:
 			}
 		}
 		InventoryRestack(this->inventory);
-		std::cout << "Вы получили "<< newItem.title << std::endl;
+		std::cout << "Вы получили " << newItem.title << std::endl;
 		system("pause");
 		system("cls");
 	}
 
-	void InventoryShow()
+protected:
+
+	int DropItemSub() //Выбрасывание вещей в локацию
+	{
+		system("cls");
+		if (!(this->inventory.empty()))
+		{
+			std::cout << "Что мне выбросить? " << std::endl;
+			for (int i = 0; i < this->inventory.size(); i++)
+			{
+				std::cout << (i + 1) << ") " << this->inventory[i].title << std::endl;
+			}
+			int choose;
+			std::cin >> choose;
+			if ((choose > this->inventory.size()) || (choose < 1)) { system("cls"); std::cout << "Я не понимаю..." << std::endl; system("pause"); system("cls"); return (-1); }
+			else
+			{
+				system("cls");
+				return (choose - 1);
+			};
+		}
+	}
+
+public:
+
+	void DeleteItem(int iterator)
+	{
+		if (this->inventory[iterator].count > 1) 
+		{
+			this->inventory[iterator].count--;
+		}
+		else this->inventory.erase(this->inventory.begin() + iterator);
+	}
+
+	Items GetItemAlloc(int iterator)
+	{
+		return this->inventory[iterator];
+	}
+
+	bool _Empty()
+	{
+		if (this->inventory.empty())
+		{
+			return true;
+		}
+		else return false;
+	}
+
+	void InventoryShow()//Показать инвентарь
 	{
 		system("cls");
 		int size = this->inventory.size();
