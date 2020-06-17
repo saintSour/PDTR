@@ -10,6 +10,7 @@ public:
 	{
 
 	}
+	friend maincharacter;
 
 	WorldInventory WorldInventory;
 	Time WorldTime;
@@ -18,11 +19,35 @@ public:
 	{
 		if (!(mainCharacter.inventory._Empty()))
 		{
-			int tempChoose = mainCharacter.inventory.DropItemSub();
+			std::string tempType;
+			int tempChoose = mainCharacter.inventory.DropItemSub(tempType);
 			if (tempChoose != -1)
 			{
-				this->WorldInventory.GetItem_location(mainCharacter, mainCharacter.inventory.GetItemAlloc(tempChoose));
-				mainCharacter.inventory.DeleteItem(tempChoose);
+				if (tempType == "Weapon")
+				{
+					this->WorldInventory.GetItem_location(mainCharacter, mainCharacter.inventory.GetItemAlloc_Weapon(tempChoose, tempType));
+					mainCharacter.inventory.DeleteItem(tempChoose, tempType);
+				}
+				if (tempType == "Armor")
+				{
+					this->WorldInventory.GetItem_location(mainCharacter, mainCharacter.inventory.GetItemAlloc_Armor(tempChoose, tempType));
+					mainCharacter.inventory.DeleteItem(tempChoose, tempType);
+				}
+				if (tempType == "Consumable")
+				{
+					this->WorldInventory.GetItem_location(mainCharacter, mainCharacter.inventory.GetItemAlloc_Consumable(tempChoose, tempType));
+					mainCharacter.inventory.DeleteItem(tempChoose, tempType);
+				}
+				if (tempType == "Component")
+				{
+					this->WorldInventory.GetItem_location(mainCharacter, mainCharacter.inventory.GetItemAlloc_Component(tempChoose, tempType));
+					mainCharacter.inventory.DeleteItem(tempChoose, tempType);
+				}
+				if (tempType == "QuestItem")
+				{
+					this->WorldInventory.GetItem_location(mainCharacter, mainCharacter.inventory.GetItemAlloc_QuestItem(tempChoose, tempType));
+					mainCharacter.inventory.DeleteItem(tempChoose, tempType);
+				}
 			}
 		}
 	}

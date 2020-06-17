@@ -12,39 +12,39 @@ class WorldInventory
 public:
 
 private:
-	std::vector<Items> HouseNearTheHills_Inventory;
+	std::vector<ShortItem> HouseNearTheHills_Inventory; //название, количество, ID
 
-	std::vector<Items> CastleGates_Inventory;
+	std::vector<ShortItem> CastleGates_Inventory;
 
-	std::vector<Items> GreenForest_Inventory;
+	std::vector<ShortItem> GreenForest_Inventory;
 
-	std::vector<Items> DeepForest_Inventory;
+	std::vector<ShortItem> DeepForest_Inventory;
 
-	std::vector<Items> GladeNearTheCity_Inventory;
+	std::vector<ShortItem> GladeNearTheCity_Inventory;
 
-	std::vector<Items> MagesTower_Inventory;
+	std::vector<ShortItem> MagesTower_Inventory;
 
-	std::vector<Items> CastleCenter_Inventory;
+	std::vector<ShortItem> CastleCenter_Inventory;
 
-	std::vector<Items> GuildDistrict_Inventory;
+	std::vector<ShortItem> GuildDistrict_Inventory;
 
-	std::vector<Items> Marketplace_Inventory;
+	std::vector<ShortItem> Marketplace_Inventory;
 
-	std::vector<Items> Church_Inventory;
+	std::vector<ShortItem> Church_Inventory;
 
-	std::vector<Items> BlackSmith_Inventory;
+	std::vector<ShortItem> BlackSmith_Inventory;
 
-	std::vector<Items> CastleNook_Inventory;
+	std::vector<ShortItem> CastleNook_Inventory;
 
-	std::vector<Items> AdventurersGuild_Inventory;
+	std::vector<ShortItem> AdventurersGuild_Inventory;
 
-	std::vector<Items> ArchersGuild_Inventory;
+	std::vector<ShortItem> ArchersGuild_Inventory;
 
-	std::vector<Items> RoguesGuild_Inventory; //15
+	std::vector<ShortItem> RoguesGuild_Inventory; //15
 
-	std::vector<Items> WarriorsGuild_Inventory;
+	std::vector<ShortItem> WarriorsGuild_Inventory;
 
-	std::vector<Items>& FindLocation(maincharacter mainCharacter)
+	std::vector<ShortItem>& FindLocation(maincharacter mainCharacter)
 	{
 		if (mainCharacter.GetLocation() == "HouseNearTheHills") return HouseNearTheHills_Inventory;
 		if (mainCharacter.GetLocation() == "CastleGates")	    return CastleGates_Inventory;
@@ -65,13 +65,12 @@ private:
 		if (mainCharacter.GetLocation()== "WarriorsGuild")	    return WarriorsGuild_Inventory;
 	}
 
-	void InventoryResize(std::vector<Items>& inventory) //изменение размера инвентаря при необходимости
+	void InventoryResize(std::vector<ShortItem>& inventory) //изменение размера инвентаря при необходимости
 	{
 		int size = inventory.size();
 		if (size == 0) inventory.resize(0);
 		else
 		{
-
 			while (inventory[(size - 1)].ID == 0)
 			{
 				inventory.erase(inventory.end() - 1);
@@ -82,7 +81,7 @@ private:
 		};
 	};
 
-	void InventoryRestack(std::vector<Items>* inventory) //перестановка(сортировка)
+	void InventoryRestack(std::vector<ShortItem>* inventory) //перестановка(сортировка)
 	{
 		int size = (*inventory).size();
 		for (int i = 0; i < size; i++)
@@ -109,9 +108,7 @@ private:
 		//InventoryRestack();
 	}
 
-public://временно
-
-	void DeleteItem(std::vector<Items>* locationInventory, int iterator)
+	void DeleteItem(std::vector<ShortItem>* locationInventory, int iterator)
 	{
 		if ((*locationInventory)[iterator].count > 1)
 		{
@@ -120,7 +117,10 @@ public://временно
 		else (*locationInventory).erase((*locationInventory).begin() + iterator);
 	}
 
-	void GetItem_location(maincharacter mainCharacter, Items item)//передать локации предмет
+public://временно
+
+	template <class T>
+	void GetItem_location(maincharacter mainCharacter, T item)//передать локации предмет
 	{
 		//InventoryResize(FindLocation(mainCharacter));
 		if (!(FindLocation(mainCharacter).empty()))
@@ -134,17 +134,37 @@ public://временно
 				}
 				else
 				{
-					(FindLocation(mainCharacter)).push_back(item);// будет ли дюп предметов?
+					(FindLocation(mainCharacter)).push_back(CreateShortItem(item.title, 1 /*item.count*/, item.ID));// будет ли дюп предметов?
 					break;
 				}
 			}
-		} else (FindLocation(mainCharacter)).push_back(item);
+		} else (FindLocation(mainCharacter)).push_back(CreateShortItem(item.title, 1 /*item.count*/, item.ID));
 		InventoryRestack(&FindLocation(mainCharacter));
 	}
 
 	void GetItem(maincharacter mainCharacter, int itemID)
 	{
-		GetItem_location(mainCharacter, CreateItem(itemID));
+		std::string tempType = GetItemType(itemID);
+		if (tempType == "Weapon")
+		{
+			GetItem_location(mainCharacter, CreateItem_Weapon(itemID));
+		}
+		if (tempType == "Armor")
+		{
+			GetItem_location(mainCharacter, CreateItem_Armor(itemID));
+		}
+		if (tempType == "Consumable")
+		{
+			GetItem_location(mainCharacter, CreateItem_Consumable(itemID));
+		}
+		if (tempType == "Component")
+		{
+			GetItem_location(mainCharacter, CreateItem_Component(itemID));
+		}
+		if (tempType == "QuestItem")
+		{
+			GetItem_location(mainCharacter, CreateItem_QuestItem(itemID));
+		}
 	}
 
 public:

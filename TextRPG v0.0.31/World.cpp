@@ -83,10 +83,18 @@ void HouseNearTheHills(maincharacter& mainCharacter, World& world)
 	mainCharacter.characterLevel = 10;
 	GetRole(mainCharacter, "Warrior");
 	mainCharacter.characterLevel = 20;
-	/*mainCharacter.inventory.GetItem(1001);
 	mainCharacter.inventory.GetItem(1001);
-	world.DropItemOnTheGround(mainCharacter, world);
-	world.PickItemFromTheGround(mainCharacter, world);*/
+	mainCharacter.inventory.GetItem(1001);
+	mainCharacter.inventory.GetItem(2001);
+	mainCharacter.inventory.GetItem(2001);
+	mainCharacter.inventory.GetItem(3001);
+	mainCharacter.inventory.GetItem(3001);
+	mainCharacter.inventory.GetItem(4001);
+	mainCharacter.inventory.GetItem(4001);
+	mainCharacter.inventory.GetItem(5001);
+	mainCharacter.inventory.GetItem(5001);
+	//world.DropItemOnTheGround(mainCharacter, world);
+	//world.PickItemFromTheGround(mainCharacter, world);
 	system("cls");
 	for (;;)
 	{

@@ -1,0 +1,2 @@
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Debug\TextRPG.exe
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Debug\TextRPG.pdb
