@@ -11,22 +11,22 @@
 /*#include "SkillStock.h"
 #include "BattleSystem.h"
 */
+#include "Сharacteristics.h"
 #include "SkillStock.h"
 #include "BattleSystem.h"
 #include "Inventory.h"
+class Equipment;
+#include "Equipment.h"
 
-void CQACount(maincharacter& mainCharacter);
-//class Inventory;//
-//class World;//
+void CQACount(maincharacter& mainCharacter);// необходимое объявление
 
 class Actors
 {
 public:
 	Actors()
 	{
-		this->initiative = 0;
+
 	}
-	int initiative;
 };
 
 class maincharacter : public Actors
@@ -43,47 +43,10 @@ private:
 public:
 	int characterLevel = 0;
 
-	int maxHitPoints = 21;
-	int maxManaPoints = 4;
-	int hitPoints = maxHitPoints;
-	int manaPoints = maxManaPoints;
-
-	int hpMultiplier;
-	int mpMultiplier;
-	int addHpMultiplier;
-	int addMpMultiplier;
-
-	int physicalDamage;
-	int magicalDamage;
-	int blockCount;
-	double criticalChance;
-	double criticalRate;
-
-	double blockChance; //шанс непосредственного блокирования
-	double dodgeChance;
-	double accuracy;
-
-	int actionPoints; //Количество ОД
-	int maxActionPoints = 3;
-	int roleActionPoints;
-	int maxRoleActionPoints;
-
-	int physicalStability;
-	int magicalStability;
-
-	int physicalStrength; //нерабочий вариант
-	int magicalStrength;
-
-	int agility; //ловкость
-	int rhetoric; //красноречие, а-ля убеждение
-	int luck; //удача
-	int spirit; //дух
-	int endurance; //выносливость
-	//int initiative; //инициатива
-	int visibility; //заметность
-	
-	double maxWeight; //Максимальный вес
-	double dropChance; //Доп. Шанс выпадения лута
+	Characteristics characteristics; //характеристики персонажа
+	Inventory inventory; //инвентарь персонажа
+	SkillStock skills; //способности персонажа
+	Equipment equipment; //снаряжение персонажа
 
 private:
 	int countOfExperience = 0;
@@ -183,9 +146,6 @@ public:
 		this->location = location;
 	}
 
-public: 
-		Inventory inventory; //инвентарь персонажа
-		SkillStock skills; //способности персонажа
 private:
 
 	void StandartAttack(maincharacter& mainCharacter, std::vector<Enemy>& enemies);//стандартное од для оружия + определение вынесено в Skills.cpp
@@ -198,13 +158,13 @@ public:
 
 	void APRegen()
 	{
-		this->actionPoints = this->maxActionPoints;
+		this->characteristics.actionPoints = this->characteristics.maxActionPoints;
 	}
 
 	void MaincharacterTurn(maincharacter& mainCharacter, std::vector<Enemy>& enemies)
 	{
 		system("cls");
-		for (int goOut = 0; (mainCharacter.actionPoints > 0) || (goOut != 1);)
+		for (int goOut = 0; (mainCharacter.characteristics.actionPoints > 0) || (goOut != 1);)
 		{
 			if (!enemies.empty())
 			{
@@ -234,7 +194,7 @@ public:
 				{
 					system("cls");
 					goOut = 1;
-					mainCharacter.actionPoints = 0;
+					mainCharacter.characteristics.actionPoints = 0;
 					EnemyDeath(mainCharacter, enemies);
 					break;
 				}
@@ -273,7 +233,6 @@ public:
 	}
 
 };
-
 
 class _
 {

@@ -1,0 +1,144 @@
+﻿  attributes.cpp
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(370,1): warning C4267: return: преобразование из "size_t" в "int"; возможна потеря данных
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(376,1): warning C4267: return: преобразование из "size_t" в "int"; возможна потеря данных
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(382,1): warning C4267: return: преобразование из "size_t" в "int"; возможна потеря данных
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(388,1): warning C4267: return: преобразование из "size_t" в "int"; возможна потеря данных
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(517,1): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(518,1): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(519,1): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(520,1): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(521,1): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\attributes.cpp(20,230): warning C4267: =: преобразование из "size_t" в "int"; возможна потеря данных
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\attributes.cpp(41,111): warning C4267: =: преобразование из "size_t" в "int"; возможна потеря данных
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\attributes.cpp(64,110): warning C4267: =: преобразование из "size_t" в "int"; возможна потеря данных
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\attributes.cpp(65,106): warning C4267: =: преобразование из "size_t" в "int"; возможна потеря данных
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(58,1): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(93): message : выполняется компиляция ссылки на экземпляр шаблон функции "void Inventory::InventoryResize<Weapon>(std::vector<Weapon,std::allocator<Weapon>> &)"
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(34,1): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(109): message : выполняется компиляция ссылки на экземпляр шаблон функции "void Inventory::InventoryRestack<Weapon>(std::vector<Weapon,std::allocator<Weapon>> &)"
+  BattleSystem.cpp
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(370,1): warning C4267: return: преобразование из "size_t" в "int"; возможна потеря данных
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(376,1): warning C4267: return: преобразование из "size_t" в "int"; возможна потеря данных
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(382,1): warning C4267: return: преобразование из "size_t" в "int"; возможна потеря данных
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(388,1): warning C4267: return: преобразование из "size_t" в "int"; возможна потеря данных
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(517,1): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(518,1): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(519,1): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(520,1): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(521,1): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\BattleSystem.cpp(77,46): warning C4267: аргумент: преобразование из "size_t" в "int"; возможна потеря данных
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\BattleSystem.cpp(79,34): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(58,1): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(93): message : выполняется компиляция ссылки на экземпляр шаблон функции "void Inventory::InventoryResize<Weapon>(std::vector<Weapon,std::allocator<Weapon>> &)"
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(34,1): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(109): message : выполняется компиляция ссылки на экземпляр шаблон функции "void Inventory::InventoryRestack<Weapon>(std::vector<Weapon,std::allocator<Weapon>> &)"
+  enemies.cpp
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(370,1): warning C4267: return: преобразование из "size_t" в "int"; возможна потеря данных
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(376,1): warning C4267: return: преобразование из "size_t" в "int"; возможна потеря данных
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(382,1): warning C4267: return: преобразование из "size_t" в "int"; возможна потеря данных
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(388,1): warning C4267: return: преобразование из "size_t" в "int"; возможна потеря данных
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(517,1): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(518,1): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(519,1): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(520,1): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(521,1): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\enemies.cpp(10,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\enemies.cpp(27,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(58,1): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(93): message : выполняется компиляция ссылки на экземпляр шаблон функции "void Inventory::InventoryResize<Weapon>(std::vector<Weapon,std::allocator<Weapon>> &)"
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(34,1): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(109): message : выполняется компиляция ссылки на экземпляр шаблон функции "void Inventory::InventoryRestack<Weapon>(std::vector<Weapon,std::allocator<Weapon>> &)"
+  game.cpp
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(370,1): warning C4267: return: преобразование из "size_t" в "int"; возможна потеря данных
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(376,1): warning C4267: return: преобразование из "size_t" в "int"; возможна потеря данных
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(382,1): warning C4267: return: преобразование из "size_t" в "int"; возможна потеря данных
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(388,1): warning C4267: return: преобразование из "size_t" в "int"; возможна потеря данных
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(517,1): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(518,1): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(519,1): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(520,1): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(521,1): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\WorldExtensions.h(70,1): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\WorldExtensions.h(86,1): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(58,1): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(93): message : выполняется компиляция ссылки на экземпляр шаблон функции "void Inventory::InventoryResize<Weapon>(std::vector<Weapon,std::allocator<Weapon>> &)"
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(34,1): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(109): message : выполняется компиляция ссылки на экземпляр шаблон функции "void Inventory::InventoryRestack<Weapon>(std::vector<Weapon,std::allocator<Weapon>> &)"
+  gameSource.cpp
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(370,1): warning C4267: return: преобразование из "size_t" в "int"; возможна потеря данных
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(376,1): warning C4267: return: преобразование из "size_t" в "int"; возможна потеря данных
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(382,1): warning C4267: return: преобразование из "size_t" в "int"; возможна потеря данных
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(388,1): warning C4267: return: преобразование из "size_t" в "int"; возможна потеря данных
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(517,1): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(518,1): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(519,1): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(520,1): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(521,1): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\WorldExtensions.h(70,1): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\WorldExtensions.h(86,1): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(58,1): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(93): message : выполняется компиляция ссылки на экземпляр шаблон функции "void Inventory::InventoryResize<Weapon>(std::vector<Weapon,std::allocator<Weapon>> &)"
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(34,1): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(109): message : выполняется компиляция ссылки на экземпляр шаблон функции "void Inventory::InventoryRestack<Weapon>(std::vector<Weapon,std::allocator<Weapon>> &)"
+  Items.cpp
+  Skills.cpp
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(370,1): warning C4267: return: преобразование из "size_t" в "int"; возможна потеря данных
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(376,1): warning C4267: return: преобразование из "size_t" в "int"; возможна потеря данных
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(382,1): warning C4267: return: преобразование из "size_t" в "int"; возможна потеря данных
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(388,1): warning C4267: return: преобразование из "size_t" в "int"; возможна потеря данных
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(517,1): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(518,1): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(519,1): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(520,1): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(521,1): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Skills.cpp(50,13): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Skills.cpp(227,53): warning C4244: =: преобразование "double" в "int", возможна потеря данных
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(58,1): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(93): message : выполняется компиляция ссылки на экземпляр шаблон функции "void Inventory::InventoryResize<Weapon>(std::vector<Weapon,std::allocator<Weapon>> &)"
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(34,1): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(109): message : выполняется компиляция ссылки на экземпляр шаблон функции "void Inventory::InventoryRestack<Weapon>(std::vector<Weapon,std::allocator<Weapon>> &)"
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Skills.cpp(50,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Skills.cpp(95): message : выполняется компиляция ссылки на экземпляр шаблон функции "void DamageDeal<maincharacter,_Ty>(T1 &,T2 &,Damage &)"
+          with
+          [
+              _Ty=Enemy,
+              T1=maincharacter,
+              T2=Enemy
+          ]
+  Temporary.cpp
+  World.cpp
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(370,1): warning C4267: return: преобразование из "size_t" в "int"; возможна потеря данных
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(376,1): warning C4267: return: преобразование из "size_t" в "int"; возможна потеря данных
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(382,1): warning C4267: return: преобразование из "size_t" в "int"; возможна потеря данных
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(388,1): warning C4267: return: преобразование из "size_t" в "int"; возможна потеря данных
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(517,1): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(518,1): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(519,1): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(520,1): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(521,1): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\WorldExtensions.h(70,1): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\WorldExtensions.h(86,1): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(58,1): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(93): message : выполняется компиляция ссылки на экземпляр шаблон функции "void Inventory::InventoryResize<Weapon>(std::vector<Weapon,std::allocator<Weapon>> &)"
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(34,1): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(109): message : выполняется компиляция ссылки на экземпляр шаблон функции "void Inventory::InventoryRestack<Weapon>(std::vector<Weapon,std::allocator<Weapon>> &)"
+  resources.cpp
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(370,1): warning C4267: return: преобразование из "size_t" в "int"; возможна потеря данных
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(376,1): warning C4267: return: преобразование из "size_t" в "int"; возможна потеря данных
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(382,1): warning C4267: return: преобразование из "size_t" в "int"; возможна потеря данных
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(388,1): warning C4267: return: преобразование из "size_t" в "int"; возможна потеря данных
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(517,1): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(518,1): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(519,1): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(520,1): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(521,1): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(58,1): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(93): message : выполняется компиляция ссылки на экземпляр шаблон функции "void Inventory::InventoryResize<Weapon>(std::vector<Weapon,std::allocator<Weapon>> &)"
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(34,1): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(109): message : выполняется компиляция ссылки на экземпляр шаблон функции "void Inventory::InventoryRestack<Weapon>(std::vector<Weapon,std::allocator<Weapon>> &)"
+  Statistics.cpp
+  Создание кода...
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(392): warning C4715: Inventory::DropItemSub: значение возвращается не при всех путях выполнения
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\WorldExtensions.h(66): warning C4715: WorldInventory::FindLocation: значение возвращается не при всех путях выполнения
+World.obj : error LNK2019: ссылка на неразрешенный внешний символ "public: void __cdecl maincharacter::Clothes(class maincharacter &)" (?Clothes@maincharacter@@QEAAXAEAV1@@Z) в функции "void __cdecl CharacterMenu(class maincharacter &,class World &)" (?CharacterMenu@@YAXAEAVmaincharacter@@AEAVWorld@@@Z).
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\x64\Debug\TextRPG.exe : fatal error LNK1120: неразрешенных внешних элементов: 1

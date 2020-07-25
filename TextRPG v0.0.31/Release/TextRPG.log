@@ -1,23 +1,60 @@
-﻿  World.cpp
+﻿  attributes.cpp
 D:\ProjectsRepo\PDTR\TextRPG v0.0.31\SkillStock.h(151,21): warning C4018: <: несоответствие типов со знаком и без знака
 D:\ProjectsRepo\PDTR\TextRPG v0.0.31\SkillStock.h(158,15): warning C4018: >: несоответствие типов со знаком и без знака
 D:\ProjectsRepo\PDTR\TextRPG v0.0.31\SkillStock.h(170,21): warning C4018: <: несоответствие типов со знаком и без знака
 D:\ProjectsRepo\PDTR\TextRPG v0.0.31\SkillStock.h(177,15): warning C4018: >: несоответствие типов со знаком и без знака
 D:\ProjectsRepo\PDTR\TextRPG v0.0.31\SkillStock.h(189,21): warning C4018: <: несоответствие типов со знаком и без знака
 D:\ProjectsRepo\PDTR\TextRPG v0.0.31\SkillStock.h(196,15): warning C4018: >: несоответствие типов со знаком и без знака
-D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(206,22): warning C4018: <: несоответствие типов со знаком и без знака
-D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(211,22): warning C4018: <: несоответствие типов со знаком и без знака
-D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(216,22): warning C4018: <: несоответствие типов со знаком и без знака
-D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(221,22): warning C4018: <: несоответствие типов со знаком и без знака
-D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(226,22): warning C4018: <: несоответствие типов со знаком и без знака
-D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(234,16): warning C4018: >: несоответствие типов со знаком и без знака
-D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(244,22): warning C4018: <: несоответствие типов со знаком и без знака
-D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(250,68): warning C4018: <: несоответствие типов со знаком и без знака
-D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(256,67): warning C4018: <: несоответствие типов со знаком и без знака
-D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(262,73): warning C4018: <: несоответствие типов со знаком и без знака
-D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(268,72): warning C4018: <: несоответствие типов со знаком и без знака
-D:\ProjectsRepo\PDTR\TextRPG v0.0.31\WorldExtensions.h(179,22): warning C4018: <: несоответствие типов со знаком и без знака
-D:\ProjectsRepo\PDTR\TextRPG v0.0.31\WorldExtensions.h(185,16): warning C4018: >: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(322,22): warning C4018: <: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(327,22): warning C4018: <: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(332,22): warning C4018: <: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(337,22): warning C4018: <: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(342,22): warning C4018: <: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(350,16): warning C4018: >: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(360,22): warning C4018: <: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(366,68): warning C4018: <: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(372,67): warning C4018: <: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(378,73): warning C4018: <: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(384,72): warning C4018: <: несоответствие типов со знаком и без знака
+  BattleSystem.cpp
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\SkillStock.h(151,21): warning C4018: <: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\SkillStock.h(158,15): warning C4018: >: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\SkillStock.h(170,21): warning C4018: <: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\SkillStock.h(177,15): warning C4018: >: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\SkillStock.h(189,21): warning C4018: <: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\SkillStock.h(196,15): warning C4018: >: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(322,22): warning C4018: <: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(327,22): warning C4018: <: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(332,22): warning C4018: <: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(337,22): warning C4018: <: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(342,22): warning C4018: <: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(350,16): warning C4018: >: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(360,22): warning C4018: <: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(366,68): warning C4018: <: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(372,67): warning C4018: <: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(378,73): warning C4018: <: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(384,72): warning C4018: <: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\BattleSystem.cpp(46,20): warning C4018: <: несоответствие типов со знаком и без знака
+  enemies.cpp
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\SkillStock.h(151,21): warning C4018: <: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\SkillStock.h(158,15): warning C4018: >: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\SkillStock.h(170,21): warning C4018: <: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\SkillStock.h(177,15): warning C4018: >: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\SkillStock.h(189,21): warning C4018: <: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\SkillStock.h(196,15): warning C4018: >: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(322,22): warning C4018: <: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(327,22): warning C4018: <: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(332,22): warning C4018: <: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(337,22): warning C4018: <: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(342,22): warning C4018: <: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(350,16): warning C4018: >: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(360,22): warning C4018: <: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(366,68): warning C4018: <: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(372,67): warning C4018: <: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(378,73): warning C4018: <: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(384,72): warning C4018: <: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\enemies.cpp(10,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\enemies.cpp(27,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
   game.cpp
 D:\ProjectsRepo\PDTR\TextRPG v0.0.31\SkillStock.h(151,21): warning C4018: <: несоответствие типов со знаком и без знака
 D:\ProjectsRepo\PDTR\TextRPG v0.0.31\SkillStock.h(158,15): warning C4018: >: несоответствие типов со знаком и без знака
@@ -25,17 +62,17 @@ D:\ProjectsRepo\PDTR\TextRPG v0.0.31\SkillStock.h(170,21): warning C4018: <: н�
 D:\ProjectsRepo\PDTR\TextRPG v0.0.31\SkillStock.h(177,15): warning C4018: >: несоответствие типов со знаком и без знака
 D:\ProjectsRepo\PDTR\TextRPG v0.0.31\SkillStock.h(189,21): warning C4018: <: несоответствие типов со знаком и без знака
 D:\ProjectsRepo\PDTR\TextRPG v0.0.31\SkillStock.h(196,15): warning C4018: >: несоответствие типов со знаком и без знака
-D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(206,22): warning C4018: <: несоответствие типов со знаком и без знака
-D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(211,22): warning C4018: <: несоответствие типов со знаком и без знака
-D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(216,22): warning C4018: <: несоответствие типов со знаком и без знака
-D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(221,22): warning C4018: <: несоответствие типов со знаком и без знака
-D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(226,22): warning C4018: <: несоответствие типов со знаком и без знака
-D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(234,16): warning C4018: >: несоответствие типов со знаком и без знака
-D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(244,22): warning C4018: <: несоответствие типов со знаком и без знака
-D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(250,68): warning C4018: <: несоответствие типов со знаком и без знака
-D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(256,67): warning C4018: <: несоответствие типов со знаком и без знака
-D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(262,73): warning C4018: <: несоответствие типов со знаком и без знака
-D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(268,72): warning C4018: <: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(322,22): warning C4018: <: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(327,22): warning C4018: <: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(332,22): warning C4018: <: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(337,22): warning C4018: <: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(342,22): warning C4018: <: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(350,16): warning C4018: >: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(360,22): warning C4018: <: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(366,68): warning C4018: <: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(372,67): warning C4018: <: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(378,73): warning C4018: <: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(384,72): warning C4018: <: несоответствие типов со знаком и без знака
 D:\ProjectsRepo\PDTR\TextRPG v0.0.31\WorldExtensions.h(179,22): warning C4018: <: несоответствие типов со знаком и без знака
 D:\ProjectsRepo\PDTR\TextRPG v0.0.31\WorldExtensions.h(185,16): warning C4018: >: несоответствие типов со знаком и без знака
   gameSource.cpp
@@ -45,22 +82,91 @@ D:\ProjectsRepo\PDTR\TextRPG v0.0.31\SkillStock.h(170,21): warning C4018: <: н�
 D:\ProjectsRepo\PDTR\TextRPG v0.0.31\SkillStock.h(177,15): warning C4018: >: несоответствие типов со знаком и без знака
 D:\ProjectsRepo\PDTR\TextRPG v0.0.31\SkillStock.h(189,21): warning C4018: <: несоответствие типов со знаком и без знака
 D:\ProjectsRepo\PDTR\TextRPG v0.0.31\SkillStock.h(196,15): warning C4018: >: несоответствие типов со знаком и без знака
-D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(206,22): warning C4018: <: несоответствие типов со знаком и без знака
-D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(211,22): warning C4018: <: несоответствие типов со знаком и без знака
-D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(216,22): warning C4018: <: несоответствие типов со знаком и без знака
-D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(221,22): warning C4018: <: несоответствие типов со знаком и без знака
-D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(226,22): warning C4018: <: несоответствие типов со знаком и без знака
-D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(234,16): warning C4018: >: несоответствие типов со знаком и без знака
-D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(244,22): warning C4018: <: несоответствие типов со знаком и без знака
-D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(250,68): warning C4018: <: несоответствие типов со знаком и без знака
-D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(256,67): warning C4018: <: несоответствие типов со знаком и без знака
-D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(262,73): warning C4018: <: несоответствие типов со знаком и без знака
-D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(268,72): warning C4018: <: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(322,22): warning C4018: <: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(327,22): warning C4018: <: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(332,22): warning C4018: <: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(337,22): warning C4018: <: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(342,22): warning C4018: <: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(350,16): warning C4018: >: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(360,22): warning C4018: <: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(366,68): warning C4018: <: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(372,67): warning C4018: <: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(378,73): warning C4018: <: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(384,72): warning C4018: <: несоответствие типов со знаком и без знака
 D:\ProjectsRepo\PDTR\TextRPG v0.0.31\WorldExtensions.h(179,22): warning C4018: <: несоответствие типов со знаком и без знака
 D:\ProjectsRepo\PDTR\TextRPG v0.0.31\WorldExtensions.h(185,16): warning C4018: >: несоответствие типов со знаком и без знака
-  Создание кода
-  6 of 942 functions ( 0.6%) were compiled, the rest were copied from previous compilation.
-    0 functions were new in current compilation
-    1 functions had inline decision re-evaluated but remain unchanged
-  Создание кода завершено
-  TextRPG.vcxproj -> D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Release\TextRPG.exe
+  Items.cpp
+  Skills.cpp
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\SkillStock.h(151,21): warning C4018: <: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\SkillStock.h(158,15): warning C4018: >: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\SkillStock.h(170,21): warning C4018: <: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\SkillStock.h(177,15): warning C4018: >: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\SkillStock.h(189,21): warning C4018: <: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\SkillStock.h(196,15): warning C4018: >: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(322,22): warning C4018: <: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(327,22): warning C4018: <: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(332,22): warning C4018: <: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(337,22): warning C4018: <: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(342,22): warning C4018: <: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(350,16): warning C4018: >: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(360,22): warning C4018: <: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(366,68): warning C4018: <: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(372,67): warning C4018: <: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(378,73): warning C4018: <: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(384,72): warning C4018: <: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Skills.cpp(23,21): warning C4018: <=: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Skills.cpp(34,24): warning C4018: <=: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Skills.cpp(50,13): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Skills.cpp(151,21): warning C4018: <=: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Skills.cpp(162,24): warning C4018: <=: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Skills.cpp(227,53): warning C4244: =: преобразование "double" в "int", возможна потеря данных
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Skills.cpp(50,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Skills.cpp(95): message : выполняется компиляция ссылки на экземпляр шаблон функции "void DamageDeal<maincharacter,_Ty>(T1 &,T2 &,Damage &)"
+          with
+          [
+              _Ty=Enemy,
+              T1=maincharacter,
+              T2=Enemy
+          ]
+  Temporary.cpp
+  World.cpp
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\SkillStock.h(151,21): warning C4018: <: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\SkillStock.h(158,15): warning C4018: >: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\SkillStock.h(170,21): warning C4018: <: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\SkillStock.h(177,15): warning C4018: >: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\SkillStock.h(189,21): warning C4018: <: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\SkillStock.h(196,15): warning C4018: >: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(322,22): warning C4018: <: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(327,22): warning C4018: <: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(332,22): warning C4018: <: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(337,22): warning C4018: <: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(342,22): warning C4018: <: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(350,16): warning C4018: >: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(360,22): warning C4018: <: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(366,68): warning C4018: <: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(372,67): warning C4018: <: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(378,73): warning C4018: <: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(384,72): warning C4018: <: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\WorldExtensions.h(179,22): warning C4018: <: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\WorldExtensions.h(185,16): warning C4018: >: несоответствие типов со знаком и без знака
+  resources.cpp
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\SkillStock.h(151,21): warning C4018: <: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\SkillStock.h(158,15): warning C4018: >: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\SkillStock.h(170,21): warning C4018: <: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\SkillStock.h(177,15): warning C4018: >: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\SkillStock.h(189,21): warning C4018: <: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\SkillStock.h(196,15): warning C4018: >: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(322,22): warning C4018: <: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(327,22): warning C4018: <: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(332,22): warning C4018: <: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(337,22): warning C4018: <: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(342,22): warning C4018: <: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(350,16): warning C4018: >: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(360,22): warning C4018: <: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(366,68): warning C4018: <: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(372,67): warning C4018: <: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(378,73): warning C4018: <: несоответствие типов со знаком и без знака
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Inventory.h(384,72): warning C4018: <: несоответствие типов со знаком и без знака
+  Statistics.cpp
+World.obj : error LNK2001: неразрешенный внешний символ "public: void __thiscall Equipment::ShowClothes(class maincharacter &)" (?ShowClothes@Equipment@@QAEXAAVmaincharacter@@@Z).
+D:\ProjectsRepo\PDTR\TextRPG v0.0.31\Release\TextRPG.exe : fatal error LNK1120: неразрешенных внешних элементов: 1

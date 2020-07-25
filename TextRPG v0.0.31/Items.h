@@ -2,6 +2,7 @@
 #include <string>
 
 
+
 class Items
 {
 public:
@@ -35,7 +36,7 @@ public:
 	std::string description;
 	std::string type;
 
-	virtual ~Items() {};
+	virtual ~Items() {}; //Зачем?
 };
 
 class ShortItem //для короткого представления игрока в инвентаре локаций
@@ -49,31 +50,59 @@ public:
 class Weapon : public Items
 {
 public:
+	Weapon()
+	{
+		this->title = "None";
+		this->additionalType = "None";
+		this->attack = 0;
+	}
+	std::string additionalType;
 	int attack;
+	std::string damageType;
+
+	std::string additionalSkill;
 };
 
 class Armor : public Items
 {
 public:
+	Armor()
+	{
+		this->title = "None";
+		this->additionalType = "None";
+		this->defence = 0;
+	}
+	std::string additionalType;
 	int defence;
+
+	std::string additionalSkill;
 };
 
 class Consumable : public Items
 {
 public:
-	
+	Consumable()
+	{
+
+	}
 };
 
 class Component : public Items
 {
 public:
-	
+	Component()
+	{
+
+	}
 };
 
 class QuestItem : public Items
 {
 public:
-	
+	QuestItem()
+	{
+
+	}
 };
 
 std::string GetItemType(int itemID);

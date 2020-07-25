@@ -17,9 +17,10 @@ public:
 
 	}
 	friend class World;
+	friend class Equipment;
 
-private:
-//protected:
+protected:
+
 	std::vector<Weapon> weapon_inventory;
 	std::vector<Armor> armor_inventory;
 	std::vector<Consumable> consumables_inventory;
@@ -50,6 +51,7 @@ private:
 		std::cout << "\n\n\n";
 		InventoryResize(inventory);
 	}
+
 	template <typename T>
 	void InventoryResize(std::vector<T>& inventory) //изменение размера инвентаря при необходимости
 	{
@@ -66,6 +68,7 @@ private:
 			//if () inventory.resize(size + 1);
 		}
 	}
+
 	template <typename T>
 	int GetElenementsCount(std::vector<T> inventory)
 	{
@@ -192,6 +195,138 @@ public:
 		}
 		system("pause");
 		system("cls");
+	}
+
+	void GetItem_WithoutDeclaring(int ItemID)
+	{
+		std::string tempItemType = GetItemType(ItemID);
+		if (tempItemType == "Weapon")
+		{
+			InventoryResize(this->weapon_inventory);
+			Weapon newItem = CreateItem_Weapon(ItemID);
+			for (size_t i = 0; i <= (this->weapon_inventory.size() - 1); i++)
+			{
+				if (this->weapon_inventory[i].title == newItem.title && newItem.isStackable)
+				{
+					this->weapon_inventory[i].count += 1;
+					break;
+				}
+				else
+				{
+					newItem.count = 1;
+					this->weapon_inventory.push_back(newItem);
+					break;
+				}
+			}
+			InventoryRestack(this->weapon_inventory);
+		}
+		if (tempItemType == "Armor")
+		{
+			InventoryResize(this->armor_inventory);
+			Armor newItem = CreateItem_Armor(ItemID);
+			for (size_t i = 0; i <= (this->armor_inventory.size() - 1); i++)
+			{
+				if (this->armor_inventory[i].title == newItem.title && newItem.isStackable)
+				{
+					this->armor_inventory[i].count += 1;
+					break;
+				}
+				else
+				{
+					newItem.count = 1;
+					this->armor_inventory.push_back(newItem);
+					break;
+				}
+			}
+			InventoryRestack(this->armor_inventory);
+		}
+		if (tempItemType == "Consumable")
+		{
+			InventoryResize(this->consumables_inventory);
+			Consumable newItem = CreateItem_Consumable(ItemID);
+			for (size_t i = 0; i <= (this->consumables_inventory.size() - 1); i++)
+			{
+				if (this->consumables_inventory[i].title == newItem.title && newItem.isStackable)
+				{
+					this->consumables_inventory[i].count += 1;
+					break;
+				}
+				else
+				{
+					newItem.count = 1;
+					this->consumables_inventory.push_back(newItem);
+					break;
+				}
+			}
+			InventoryRestack(this->consumables_inventory);
+		}
+		if (tempItemType == "Component")
+		{
+			InventoryResize(this->components_inventory);
+			Component newItem = CreateItem_Component(ItemID);
+			for (size_t i = 0; i <= (this->components_inventory.size() - 1); i++)
+			{
+				if (this->components_inventory[i].title == newItem.title && newItem.isStackable)
+				{
+					this->components_inventory[i].count += 1;
+					break;
+				}
+				else
+				{
+					newItem.count = 1;
+					this->components_inventory.push_back(newItem);
+					break;
+				}
+			}
+			InventoryRestack(this->components_inventory);
+		}
+		if (tempItemType == "QuestItem")
+		{
+			InventoryResize(this->questItems_inventory);
+			QuestItem newItem = CreateItem_QuestItem(ItemID);
+			for (size_t i = 0; i <= (this->questItems_inventory.size() - 1); i++)
+			{
+				if (this->questItems_inventory[i].title == newItem.title && newItem.isStackable)
+				{
+					this->questItems_inventory[i].count += 1;
+					break;
+				}
+				else
+				{
+					newItem.count = 1;
+					this->questItems_inventory.push_back(newItem);
+					break;
+				}
+			}
+			InventoryRestack(this->questItems_inventory);
+		}
+		system("pause");
+		system("cls");	
+	}
+
+	std::vector<Weapon> GetWeaponInventory()
+	{
+		return this->weapon_inventory;
+	}
+
+	std::vector<Armor> GetArmorInventory()
+	{
+		return this->armor_inventory;
+	}
+
+	std::vector<Consumable> GetConsumablesInventory()
+	{
+		return this->consumables_inventory;
+	}
+
+	std::vector<Component> GetComponentsInventory()
+	{
+		return this->components_inventory;
+	}
+
+	std::vector<QuestItem> GetQuestItemsInventory()
+	{
+		return this->questItems_inventory;
 	}
 
 protected:

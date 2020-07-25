@@ -28,6 +28,9 @@
     <Filter Include="Файлы заголовков\SybSystem">
       <UniqueIdentifier>{31bde93a-11e1-4312-9ac4-cf48fbc427f1}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Файлы заголовков\Equipment">
+      <UniqueIdentifier>{2ab1ea7b-a616-42a8-935c-36f474f918da}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="game.cpp">
@@ -106,6 +109,15 @@
     </ClInclude>
     <ClInclude Include="SUBSYSTEM_CLASSES.h">
       <Filter>Файлы заголовков\SybSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="Equipment.h">
+      <Filter>Файлы заголовков\Equipment</Filter>
+    </ClInclude>
+    <ClInclude Include="_grip_lib.h">
+      <Filter>Файлы заголовков\Equipment</Filter>
+    </ClInclude>
+    <ClInclude Include="Сharacteristics.h">
+      <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
