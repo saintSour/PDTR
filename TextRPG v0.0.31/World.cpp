@@ -5,6 +5,10 @@
 #include "WorldLocations.h"
 #include "Attributes.h"
 #include "game.h"
+
+#include "_grip_lib.h"
+
+
 class maincharacter;
 //
 void CharacterMenu(maincharacter& mainCharacter, World& world)
@@ -13,7 +17,7 @@ void CharacterMenu(maincharacter& mainCharacter, World& world)
 	{
 		system("cls");
 		std::cout << "Персонаж" << std::endl;
-		std::cout << "1-Сумка\n2-Характеристики\n3-Мирные способности\n4-Выбросить вещи\n5-Поискать предметы в локации\n0-Закрыть окно персонажа " << std::endl;
+		std::cout << "1-Сумка\n2-Характеристики\n3-Мирные способности\n4-Снаряжение\n5-Выбросить вещи\n6-Поискать предметы в локации\n0-Закрыть окно персонажа " << std::endl;
 		int* chooseH = new int;
 		std::cin >> *chooseH;
 		switch (*chooseH)
@@ -43,12 +47,21 @@ void CharacterMenu(maincharacter& mainCharacter, World& world)
 		}
 		case 4:
 		{
+			system("cls");
 			delete chooseH;
-			world.DropItemOnTheGround(mainCharacter, world);
+			EM_Coupling::Clothes(mainCharacter);
 			break;
 		}
 		case 5:
 		{
+			system("cls");
+			delete chooseH;
+			world.DropItemOnTheGround(mainCharacter, world);
+			break;
+		}
+		case 6:
+		{
+			system("cls");
 			delete chooseH;
 			world.PickItemFromTheGround(mainCharacter, world);
 			break;
@@ -93,8 +106,12 @@ void HouseNearTheHills(maincharacter& mainCharacter, World& world)
 	mainCharacter.inventory.GetItem(4001);
 	mainCharacter.inventory.GetItem(5001);
 	mainCharacter.inventory.GetItem(5001);
+	mainCharacter.inventory.GetItem(2050);
+										//mainCharacter.equipment.PutOn(CreateItem_Armor(2002), mainCharacter);
 	//world.DropItemOnTheGround(mainCharacter, world);
 	//world.PickItemFromTheGround(mainCharacter, world);
+
+	world.WorldInventory.GetItem(mainCharacter, 2050);
 	system("cls");
 	for (;;)
 	{

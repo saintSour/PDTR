@@ -70,9 +70,9 @@ void BattleStart(maincharacter& mainCharacter, std::vector<Enemy>& enemies) //сд
 	bool mainCharacterTurn = false;
 	mainCharacter.APRegen();
 
-	while ((mainCharacter.hitPoints > 0) && (!enemies.empty()))
+	while ((mainCharacter.characteristics.hitPoints > 0) && (!enemies.empty()))
 	{
-		mainCharacter.initiative = 7; //временная проверка
+		mainCharacter.characteristics.initiative = 7; //временная проверка
 
 		quickEnemiesSort(enemies, 0, enemies.size());//добавление гг в вектор и последующая сортировка
 
@@ -80,7 +80,7 @@ void BattleStart(maincharacter& mainCharacter, std::vector<Enemy>& enemies) //сд
 		{
 			if (i > 1)
 			{
-				if ((mainCharacter.initiative >= enemies[(i - 1)].initiative) && (!mainCharacterTurn))
+				if ((mainCharacter.characteristics.initiative >= enemies[(i - 1)].initiative) && (!mainCharacterTurn))
 				{
 					mainCharacter.MaincharacterTurn(mainCharacter, enemies);//логика персонажа
 					mainCharacterTurn = true;
@@ -94,7 +94,7 @@ void BattleStart(maincharacter& mainCharacter, std::vector<Enemy>& enemies) //сд
 			{
 				if (i == 1)
 				{
-					if ((mainCharacter.initiative > enemies[(i - 1)].initiative) && (!mainCharacterTurn))
+					if ((mainCharacter.characteristics.initiative > enemies[(i - 1)].initiative) && (!mainCharacterTurn))
 					{
 						mainCharacter.MaincharacterTurn(mainCharacter, enemies);//логика персонажа
 						mainCharacterTurn = true;

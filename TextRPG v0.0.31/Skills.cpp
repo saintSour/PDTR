@@ -4,14 +4,14 @@
 
 bool CheckRequirements(maincharacter mainCharacter, int requiredMana, int requiredAP)
 {
-	if (mainCharacter.manaPoints >= requiredMana && mainCharacter.actionPoints >= requiredAP) return true;
+	if (mainCharacter.characteristics.manaPoints >= requiredMana && mainCharacter.characteristics.actionPoints >= requiredAP) return true;
 	else return false;
 }
 
 void UseFail(maincharacter mainCharacter, int requiredMana, int requiredAP)
 {
-	if (mainCharacter.manaPoints < requiredMana) std::cout << "Мне не хватает маны " << std::endl;
-	else if (mainCharacter.actionPoints < requiredAP) std::cout << "Мне не хватает очков действия " << std::endl;
+	if (mainCharacter.characteristics.manaPoints < requiredMana) std::cout << "Мне не хватает маны " << std::endl;
+	else if (mainCharacter.characteristics.actionPoints < requiredAP) std::cout << "Мне не хватает очков действия " << std::endl;
 }
 
 int EnemyChoose(const std::vector<Enemy>& enemies)
@@ -86,7 +86,7 @@ void maincharacter::StandartAttack(maincharacter& mainCharacter, std::vector<Ene
 	int requiredMana = 0;					/*Сделать требования МП у оружия*/
 	int requiredAP = 2;						/*Сделать требования ОД у оружия*/
 	Damage damage;
-	damage.basicdamage = mainCharacter.physicalDamage;	/*Сделать урон от оружия + урон может быть магическим + зависимость типа урона от оружия*/ 
+	damage.basicdamage = mainCharacter.characteristics.physicalDamage;	/*Сделать урон от оружия + урон может быть магическим + зависимость типа урона от оружия*/
 	damage.type = "physical";
 	if (enemyChoose != -1)
 	{
@@ -94,8 +94,8 @@ void maincharacter::StandartAttack(maincharacter& mainCharacter, std::vector<Ene
 			{
 				DamageDeal(mainCharacter, enemies[enemyChoose], damage);
 
-				mainCharacter.manaPoints -= requiredMana;
-				mainCharacter.actionPoints -= requiredAP;
+				mainCharacter.characteristics.manaPoints -= requiredMana;
+				mainCharacter.characteristics.actionPoints -= requiredAP;
 			}
 			else 
 			{
@@ -114,30 +114,30 @@ void maincharacter::MaincharacterInfo(maincharacter& mainCharacter)
 	std::cout << mainCharacter.roleType << std::endl;
 	std::cout << "Уровень = " << mainCharacter.characterLevel << std::endl;
 	mainCharacter.ShowCountOfExperience();
-	std::cout << "Очки здоровья = " << mainCharacter.hitPoints << '/' << mainCharacter.maxHitPoints << std::endl;
-	std::cout << "Очки маны = " << mainCharacter.manaPoints << '/' << mainCharacter.maxManaPoints << std::endl;
-	std::cout << "Физический урон = " << mainCharacter.physicalDamage << std::endl;
-	std::cout << "Магический урон = " << mainCharacter.magicalDamage << std::endl;
-	std::cout << "Шанс критического урона = " << mainCharacter.criticalChance << " %" << std::endl;
-	std::cout << "Рейтинг критического урона = " << mainCharacter.criticalRate << std::endl;
-	std::cout << "Шанс блокирования = " << mainCharacter.blockChance << " %" << std::endl;
-	std::cout << "Шанс уклонения = " << mainCharacter.dodgeChance << " %" << std::endl;
-	std::cout << "Меткость = " <<mainCharacter.accuracy << " %" << std::endl;
-	std::cout << "Количество очков действий = " << mainCharacter.actionPoints << "/" << mainCharacter.maxActionPoints << std::endl;
-	std::cout << "Количество специальных очков действий = " << mainCharacter.roleActionPoints << "/" << mainCharacter.maxRoleActionPoints << std::endl;
-	std::cout << "Физическая стойкость = " << mainCharacter.physicalStability << std::endl;
-	std::cout << "Магическая стойкость = " << mainCharacter.magicalStability << std::endl;
-	std::cout << "Физическая сила = " << mainCharacter.physicalStrength << std::endl;
-	std::cout << "Магическая сила = " << mainCharacter.magicalStrength << std::endl;
-	std::cout << "Ловкость = " << mainCharacter.agility << std::endl;
-	std::cout << "Красноречие = " << mainCharacter.rhetoric << std::endl;
-	std::cout << "Удача = " << mainCharacter.luck << std::endl;
-	std::cout << "Дух = " << mainCharacter.spirit << std::endl;
-	std::cout << "Выносливость = " << mainCharacter.endurance << std::endl;
-	std::cout << "Инициатива = " << mainCharacter.initiative << std::endl;
-	std::cout << "Заметность = " << mainCharacter.visibility << std::endl;
-	std::cout << "Максимальный вес = " << mainCharacter.maxWeight << std::endl;
-	std::cout << "Шанс выпадения лута = " << mainCharacter.dropChance << " %" << std::endl;
+	std::cout << "Очки здоровья = " << mainCharacter.characteristics.hitPoints << '/' << mainCharacter.characteristics.maxHitPoints << std::endl;
+	std::cout << "Очки маны = " << mainCharacter.characteristics.manaPoints << '/' << mainCharacter.characteristics.maxManaPoints << std::endl;
+	std::cout << "Физический урон = " << mainCharacter.characteristics.physicalDamage << std::endl;
+	std::cout << "Магический урон = " << mainCharacter.characteristics.magicalDamage << std::endl;
+	std::cout << "Шанс критического урона = " << mainCharacter.characteristics.criticalChance << " %" << std::endl;
+	std::cout << "Рейтинг критического урона = " << mainCharacter.characteristics.criticalRate << std::endl;
+	std::cout << "Шанс блокирования = " << mainCharacter.characteristics.blockChance << " %" << std::endl;
+	std::cout << "Шанс уклонения = " << mainCharacter.characteristics.dodgeChance << " %" << std::endl;
+	std::cout << "Меткость = " <<mainCharacter.characteristics.accuracy << " %" << std::endl;
+	std::cout << "Количество очков действий = " << mainCharacter.characteristics.actionPoints << "/" << mainCharacter.characteristics.maxActionPoints << std::endl;
+	std::cout << "Количество специальных очков действий = " << mainCharacter.characteristics.roleActionPoints << "/" << mainCharacter.characteristics.maxRoleActionPoints << std::endl;
+	std::cout << "Физическая стойкость = " << mainCharacter.characteristics.physicalStability << std::endl;
+	std::cout << "Магическая стойкость = " << mainCharacter.characteristics.magicalStability << std::endl;
+	std::cout << "Физическая сила = " << mainCharacter.characteristics.physicalStrength << std::endl;
+	std::cout << "Магическая сила = " << mainCharacter.characteristics.magicalStrength << std::endl;
+	std::cout << "Ловкость = " << mainCharacter.characteristics.agility << std::endl;
+	std::cout << "Красноречие = " << mainCharacter.characteristics.rhetoric << std::endl;
+	std::cout << "Удача = " << mainCharacter.characteristics.luck << std::endl;
+	std::cout << "Дух = " << mainCharacter.characteristics.spirit << std::endl;
+	std::cout << "Выносливость = " << mainCharacter.characteristics.endurance << std::endl;
+	std::cout << "Инициатива = " << mainCharacter.characteristics.initiative << std::endl;
+	std::cout << "Заметность = " << mainCharacter.characteristics.visibility << std::endl;
+	std::cout << "Максимальный вес = " << mainCharacter.characteristics.maxWeight << std::endl;
+	std::cout << "Шанс выпадения лута = " << mainCharacter.characteristics.dropChance << " %" << std::endl;
 	system("pause");
 	system("cls");
 }
@@ -207,12 +207,12 @@ void BandageWounds(maincharacter& mainCharacter, int requiredMana, int requiredA
 	{
 		int heal = 5; //количество восстановленного здоровья
 		std::cout << "Вы перевязали раны и вылечили " << heal << "ХП" << std::endl;
-		mainCharacter.hitPoints += heal;
-		if (mainCharacter.hitPoints > mainCharacter.maxHitPoints)
-			mainCharacter.hitPoints = mainCharacter.maxHitPoints;
+		mainCharacter.characteristics.hitPoints += heal;
+		if (mainCharacter.characteristics.hitPoints > mainCharacter.characteristics.maxHitPoints)
+			mainCharacter.characteristics.hitPoints = mainCharacter.characteristics.maxHitPoints;
 
-		mainCharacter.manaPoints -= requiredMana;
-		mainCharacter.actionPoints -= requiredAP;
+		mainCharacter.characteristics.manaPoints -= requiredMana;
+		mainCharacter.characteristics.actionPoints -= requiredAP;
 	}
 	else UseFail(mainCharacter, requiredMana, requiredAP);
 	system("pause");
@@ -224,7 +224,7 @@ void DoubleStrike(maincharacter& mainCharacter, int requiredMana, int requiredAP
 	int enemyChoose;
 	enemyChoose = EnemyChoose(enemies);
 	Damage damage;
-	damage.basicdamage = (mainCharacter.physicalDamage * 0.8);	/*Сделать урон от оружия + урон может быть магическим + зависимость типа урона от оружия*/
+	damage.basicdamage = (mainCharacter.characteristics.physicalDamage * 0.8);	/*Сделать урон от оружия + урон может быть магическим + зависимость типа урона от оружия*/
 	damage.type = "physical";
 	if (enemyChoose != -1)
 	{
@@ -234,8 +234,8 @@ void DoubleStrike(maincharacter& mainCharacter, int requiredMana, int requiredAP
 
 			DamageDeal(mainCharacter, enemies[enemyChoose], damage);
 
-			mainCharacter.manaPoints -= requiredMana;
-			mainCharacter.actionPoints -= requiredAP;
+			mainCharacter.characteristics.manaPoints -= requiredMana;
+			mainCharacter.characteristics.actionPoints -= requiredAP;
 		}
 		else UseFail(mainCharacter, requiredMana, requiredAP);
 		system("pause");

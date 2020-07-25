@@ -155,6 +155,7 @@
     <ClInclude Include="BattleSystem.h" />
     <ClInclude Include="Damage.h" />
     <ClInclude Include="Enemies.h" />
+    <ClInclude Include="Equipment.h" />
     <ClInclude Include="game.h" />
     <ClInclude Include="Inventory.h" />
     <ClInclude Include="Items.h" />
@@ -162,9 +163,11 @@
     <ClInclude Include="Skills.h" />
     <ClInclude Include="SkillStock.h" />
     <ClInclude Include="SUBSYSTEM_CLASSES.h" />
+    <ClInclude Include="_grip_lib.h" />
     <ClInclude Include="World.h" />
     <ClInclude Include="WorldExtensions.h" />
     <ClInclude Include="WorldLocations.h" />
+    <ClInclude Include="Сharacteristics.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -72,8 +72,8 @@ public:
 		{
 			std::cout << attacker.enemyType << " бьёт по Вам и наносит " << attacker.physicalDamage << " урона" << std::endl;
 			//вывод текста об успешном нанесении урона
-			defender.hitPoints -= attacker.physicalDamage;
-			std::cout << "Главный герой" << " HP " << defender.hitPoints << " MP " << defender.manaPoints << std::endl;//
+			defender.characteristics.hitPoints -= attacker.physicalDamage;
+			std::cout << "Главный герой" << " HP " << defender.characteristics.hitPoints << " MP " << defender.characteristics.manaPoints << std::endl;//
 			std::cout << attacker.enemyType << " HP " << attacker.hitPoints << " MP " << attacker.manaPoints << std::endl;//
 			system("pause");
 			system("cls");

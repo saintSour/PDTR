@@ -10,31 +10,13 @@ std::string GetItemType(int itemID) //ожидает реализации
 	std::string tempType;
 	switch (itemID)
 	{
-		case 1001: //предположим, что так
-		{
-			tempType = "Weapon";
-			break;
-		}
-		case 2001:
-		{
-			tempType = "Armor";
-			break;
-		}
-		case 3001:
-		{
-			tempType = "Consumable";
-			break;
-		}
-		case 4001:
-		{
-			tempType = "Component";
-			break;
-		}
-		case 5001:
-		{
-			tempType = "QuestItem";
-			break;
-		}
+		case 1001: tempType = "Weapon"; break; //предположим, что так
+		case 2001: tempType = "Armor"; break;
+		case 2002: tempType = "Armor"; break;
+		case 2050: tempType = "Armor"; break;
+		case 3001: tempType = "Consumable"; break;
+		case 4001: tempType = "Component"; break;
+		case 5001: tempType = "QuestItem"; break;
 	}
 	return tempType;
 }
@@ -71,6 +53,16 @@ Armor CreateItem_Armor(int itemID)
 	{
 	case 2001:
 		newItem.title = "Броня";
+		newItem.description = "";
+		break;
+	case 2002:
+		newItem.title = "Шлем";
+		newItem.additionalType = "Head";
+		newItem.description = "";
+		break;
+	case 2050:
+		newItem.title = "Лютый шлем пацана";
+		newItem.additionalType = "Head";
 		newItem.description = "";
 		break;
 	}
@@ -112,7 +104,7 @@ QuestItem CreateItem_QuestItem(int itemID)
 	switch (itemID)
 	{
 	case 5001:
-		newItem.title = "Квестовый предмет";
+		newItem.title = "Квестовый предмет"; 
 		newItem.description = "";
 		break;
 	}
